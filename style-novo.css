@@ -548,7 +548,7 @@ div#menu div.prateleira ul li {
 }
 
 .prod-nome {
-    height: 35px;
+    min-height: 55px;
     display: table;
     text-align: left;
     width: 100%;
@@ -1819,7 +1819,7 @@ div#formulario-parceiros #enviar {
 }
 
 .prod-nome {
-
+    padding: 0 5px;
     font-weight: 300;
     letter-spacing: .4px;
     text-transform: uppercase;
@@ -3546,6 +3546,50 @@ body.vazia div.prateleira ul li {
     position: relative;
     border: 1px solid #E6E6E6;
     border-radius: 5px;
+    margin-right: 15px;
+}
+
+body.home div.prateleira .slick-list,
+body.produto div.prateleira .slick-list,
+body.vazia div.prateleira .slick-list {
+    margin-left: 12px;
+}
+
+div.prateleira .slick-prev,
+div.prateleira .slick-next {
+    background-color: #E9E9E9;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    height: 35px;
+    width: 30px;
+    z-index: 1;
+}
+
+div.prateleira .slick-next:before,
+div.prateleira .slick-prev:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    opacity: 1;
+    background: unset;
+    color: #fff;
+    padding-bottom: 3px;
+}
+
+div.prateleira .slick-prev:hover,
+div.prateleira .slick-next:hover {
+    background: #E64409;
+}
+
+div.prateleira .slick-next:before {
+    content: ">";
+}
+
+div.prateleira .slick-prev:before {
+    content: "<";
 }
 
 .prateleira.vitrine .prod-nome h3 a {
@@ -3556,7 +3600,14 @@ body.vazia div.prateleira ul li {
     text-align: center;
 }
 
-.prateleira.vitrine .brand {
+.prateleira ul li .prod-image img {
+    max-width: 190px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.prateleira ul li .brand {
     color: #5E5E5E;
     text-align: center;
     font-size: 13px;
@@ -3564,7 +3615,7 @@ body.vazia div.prateleira ul li {
     text-transform: uppercase;
 }
 
-div.price .right-preco>a>em {
+.prateleira ul li div.price .right-preco>a>em {
     display: table;
     color: #007FAE;
     font-size: 25px;
@@ -3572,7 +3623,7 @@ div.price .right-preco>a>em {
     font-weight: bold;
 }
 
-div.price .right-preco>a {
+.prateleira ul li div.price .right-preco>a {
     display: flex;
     color: #8e8d8c;
     text-decoration: none;
@@ -3580,36 +3631,35 @@ div.price .right-preco>a {
     justify-content: center;
 }
 
-.right-preco {
+.prateleira ul li .right-preco {
     display: grid;
     min-height: 50px;
 }
 
-.left-preco {
+.prateleira ul li .left-preco {
     text-align: center;
     margin-top: 10px;
 }
 
-em.installment {
+.prateleira ul li em.installment {
     color: #000;
     font-size: 12px;
     font-weight: bold;
     position: relative;
 }
 
-em.installment:before {
+.prateleira ul li em.installment:before {
     content: "ou ";
 }
 
-
-.price {
+.prateleira ul li .price {
     position: relative;
     display: table;
     width: 100%;
     margin-top: 30px;
 }
 
-.shelf-buy {
+.prateleira ul li .shelf-buy {
     display: flex;
     margin: 20px 5px;
     background-color: #FF7104;
@@ -3619,9 +3669,9 @@ em.installment:before {
     cursor: pointer;
 }
 
-.shelf-buy>span {
+.prateleira ul li .shelf-buy>span {
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     padding: 14px 0 14px 0;
     border-radius: 10px;
@@ -3630,4 +3680,34 @@ em.installment:before {
     background-size: 30px;
     letter-spacing: 1px;
     text-align: center;
+}
+
+div#page-content>.vitrine {
+    background: #fff;
+    border-radius: 5px;
+    max-width: 1300px;
+    box-shadow: 0px 0px 6px #0000005E;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.prateleira {
+    padding-top: 1px;
+}
+
+/* banner centro */
+
+.banner-centro {
+    max-width: 1300px;
+    padding: 0;
+    margin: 25px auto;
+}
+
+.banner-centro img {
+    width: 100%;
+}
+
+.banner-centro:hover img {
+    opacity: 0.7;
+    transition: 1s;
 }
