@@ -125,6 +125,13 @@ function addTocart() {
     });
 }
 
+function vitrinesHome() {
+    $(".vitrine>.prateleira>ul").slick({
+        slidesToShow: 5,
+        slidesToScroll: 1
+    });
+}
+
 $(window).ready(function () {
 
     if ($(location).attr('href').match(/equipabr.com.br/)) {
@@ -140,6 +147,7 @@ $(document).ready(function () {
     addTocart();
     openCart();
     closeCart();
+    vitrinesHome();
 
     $i = "n";//line 
     $T = "n";//line 
