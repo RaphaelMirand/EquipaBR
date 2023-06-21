@@ -132,6 +132,13 @@ function vitrinesHome() {
     });
 }
 
+function carrosselMarcas() {
+    $(".carrossel-marcas").slick({
+        slidesToShow: 9,
+        slidesToScroll: 1
+    });
+}
+
 $(window).ready(function () {
 
     if ($(location).attr('href').match(/equipabr.com.br/)) {
@@ -148,6 +155,7 @@ $(document).ready(function () {
     openCart();
     closeCart();
     vitrinesHome();
+    carrosselMarcas();
 
     $i = "n";//line 
     $T = "n";//line 

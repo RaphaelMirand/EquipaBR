@@ -130,7 +130,7 @@ body {
     line-height: 1;
     width: 100%;
     font-size: 16px;
-    background: transparent;
+    background: #f1f1f1;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -289,6 +289,7 @@ ul.ui-autocomplete li a {
 header {
     width: 100%;
     display: table;
+    background: #fff;
 }
 
 div#menu {
@@ -1627,16 +1628,24 @@ p.compare a {
 
 div#news {
     width: 100%;
-    display: none;
-    margin: 10px auto 0 auto;
+    margin: auto;
     position: relative;
-    padding: 14px 0;
-    background: #467cae;
+    background: #fff;
+    height: 70px;
+    margin-top: 70px;
 }
 
 div#news>.newsletter {
     margin: 0 auto;
-    display: table;
+    display: block;
+    background: #0581AF;
+    max-width: 1300px;
+    padding: 30px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    border-radius: 8px 0 0 8px;
 }
 
 div#news>.newsletter h3 {
@@ -2582,10 +2591,6 @@ body.compare table #compare {
     div#info-topo {
         display: table;
     }
-
-    div#news {
-        display: table;
-    }
 }
 
 /*******************************************************************LOGIN************************************************************************/
@@ -3201,10 +3206,6 @@ span.txtteleve {
     margin-left: 50px;
 }
 
-input#newsletterClientName {
-    display: none;
-}
-
 @media screen and (max-width: 475px) {
     #popup-capture {
         left: 0;
@@ -3555,8 +3556,8 @@ body.vazia div.prateleira .slick-list {
     margin-left: 12px;
 }
 
-div.prateleira .slick-prev,
-div.prateleira .slick-next {
+body .slick-prev,
+body .slick-next {
     background-color: #E9E9E9;
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     height: 35px;
@@ -3564,8 +3565,8 @@ div.prateleira .slick-next {
     z-index: 1;
 }
 
-div.prateleira .slick-next:before,
-div.prateleira .slick-prev:before {
+body .slick-next:before,
+body .slick-prev:before {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3579,17 +3580,24 @@ div.prateleira .slick-prev:before {
     padding-bottom: 3px;
 }
 
-div.prateleira .slick-prev:hover,
-div.prateleira .slick-next:hover {
+body .slick-prev:hover,
+body .slick-next:hover {
     background: #E64409;
 }
 
-div.prateleira .slick-next:before {
+body .slick-next:before {
     content: ">";
 }
 
-div.prateleira .slick-prev:before {
+body .slick-prev:before {
     content: "<";
+}
+
+body .slick-prev:focus,
+body .slick-next:focus {
+    color: #fff;
+    outline: none;
+    background: #E64409;
 }
 
 .prateleira.vitrine .prod-nome h3 a {
@@ -3730,4 +3738,33 @@ div#page-content>.vitrine {
 .banner-duplo img:hover {
     opacity: 0.7;
     transition: 1s;
+}
+
+/* carrossel marcas */
+
+.carrossel-marcas {
+    max-width: 1300px;
+    margin: 25px auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px #0000005E;
+    border-radius: 5px;
+}
+
+.carrossel-marcas .slick-list {
+    width: 95%;
+    margin: auto;
+}
+
+.carrossel-marcas .box-banner {
+    margin-right: 10px;
+}
+
+.carrossel-marcas .slick-next {
+    right: 1%;
+}
+
+.carrossel-marcas .slick-prev {
+    left: 1%;
 }
