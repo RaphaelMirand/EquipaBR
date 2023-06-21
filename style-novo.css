@@ -3711,3 +3711,23 @@ div#page-content>.vitrine {
     opacity: 0.7;
     transition: 1s;
 }
+
+/* banner duplo */
+
+.banner-duplo {
+    max-width: 1300px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 25px auto;
+}
+
+.banner-duplo img {
+    width: 100%;
+}
+
+.banner-duplo img:hover {
+    opacity: 0.7;
+    transition: 1s;
+}
