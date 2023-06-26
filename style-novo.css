@@ -2609,7 +2609,7 @@ ul.cd-tabs-content {
 }
 
 div#compare {
-    float: right;
+    display: none;
 }
 
 ul.cd-tabs-content {
@@ -2823,6 +2823,7 @@ body .slick-next:focus {
 }
 
 .prateleira ul li .prod-image img {
+    display: flex;
     max-width: 190px;
     width: 100%;
     height: auto;
@@ -3263,4 +3264,108 @@ body.departamento .content-produtos {
 .main span.resultado-busca-termo,
 .main span.resultado-busca-tempo {
     display: none;
+}
+
+body.departamento .content-produtos .title-page {
+    color: #007FAE;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #007FAE;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+body.departamento p.searchResultsTime {
+    float: left;
+}
+
+fieldset.filterBy,
+p.compare,
+.custom-OB,
+.pager.top {
+    display: none;
+}
+
+body.departamento span.resultado-busca-numero {
+    color: #000;
+    font-weight: 500;
+}
+
+body.departamento span.resultado-busca-numero .value {
+    font-weight: bold;
+}
+
+body.departamento fieldset.orderBy {
+    float: right;
+}
+
+body.departamento .prateleira.vitrine.n4colunas {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.prateleira.vitrine.n4colunas>ul {
+    display: flex;
+    gap: 10px;
+}
+
+body.departamento .prateleira ul>li {
+    border: 1px solid #E6E6E6;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 25%;
+}
+
+.prateleira ul>li .prod-nome {
+    min-height: 70px;
+}
+
+.pager.bottom .pages {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+p.searchResultsTime:nth-of-type(2) {
+    display: none;
+}
+
+.main>.sub:nth-last-child(1) {
+    display: none;
+}
+
+.pager.bottom .pages li.page-number.pgCurrent {
+    color: #FF7104;
+    font-weight: bold;
+}
+
+.pager.bottom .pages li.next {
+    font-size: 0;
+}
+
+.pager.bottom .pages li.next::before {
+    content: "";
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.6px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.pager.bottom .pages li.previous {
+    font-size: 0;
+}
+
+.pager.bottom .pages li.previous::before {
+    content: "";
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.6px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
