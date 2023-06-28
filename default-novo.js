@@ -157,6 +157,8 @@ $(document).ready(function () {
     vitrinesHome();
     carrosselMarcas();
 
+    $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
+
     $i = "n";//line 
     $T = "n";//line 
     $O = "n";//line
