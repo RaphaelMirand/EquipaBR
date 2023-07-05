@@ -3624,10 +3624,104 @@ body.produto div#top-right .skuList {
     position: relative;
 }
 
-body.produto div#top-right div#sku {
+body.produto div#top-right .imageSku {
     display: none;
 }
 
-body.produto div#top-right .imageSku {
-    display: none;
+body.produto .linha-4 .box-pagamento ul {
+    display: flex;
+    gap: 10px;
+}
+
+body.produto p.descricao-preco em.valor-por.price-best-price {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+body.produto p.descricao-preco em.valor-por.price-best-price strong.skuBestPrice {
+    color: #007FAE;
+    font-size: 35px;
+}
+
+body.produto .buy-button-minicart {
+    display: grid;
+    grid-template-columns: 15% 84%;
+    gap: 1%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #C5C5C5;
+}
+
+body.produto a.buy-in-page-button {
+    background: #007FAE;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 24px;
+    font-size: 0;
+}
+
+body.produto p.pix {
+    font-size: 15px;
+    color: #007FAE;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+body.produto a.buy-in-page-button::before {
+    content: "ADICIONAR AO CARRINHO";
+    font-size: 18px;
+}
+
+body.produto input.buy-in-page-quantity {
+    border: 1px solid #C7C7C7;
+    border-radius: 24px;
+    text-align: center;
+    color: #21354F;
+    font-weight: bold;
+}
+
+.buy-button-cart {
+    margin-top: 30px;
+    background: #FF8204;
+    text-align: center;
+    border-radius: 24px;
+    padding: 10px 0;
+}
+
+.buy-button-cart a.buy-button.buy-button-ref {
+    color: #fff;
+    font-size: 0;
+}
+
+.buy-button-cart a.buy-button.buy-button-ref::before {
+    content: "COMPRAR AGORA";
+    font-size: 18px;
+}
+
+div#frete {
+    margin-top: 25px;
+}
+
+.box-pagamento {
+    margin-top: 10px;
+}
+
+.box-pagamento>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-pagamento h6 {
+    font-size: 16px;
+    color: #21354F;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.box-pagamento h5 {
+    font-size: 11px;
+    color: #21354F;
+    font-weight: 600;
+    margin-bottom: 5px;
 }

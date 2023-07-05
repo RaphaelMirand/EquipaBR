@@ -66,12 +66,7 @@ function montarSeletordeSKU() {
         $("ul#sku_list").append(`<li>${codsku.skuname}</li>`)
     });
 
-
-
 }
-
-
-
 
 $(document).ready(function () {
 
@@ -80,7 +75,6 @@ $(document).ready(function () {
     closeCart();
     vitrinesHome();
     carrosselMarcas();
-    montarSeletordeSKU();
 
     $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
 });
