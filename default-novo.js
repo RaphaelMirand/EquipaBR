@@ -1,3 +1,10 @@
+function header() {
+
+    /* placeholder do campo de busca */
+
+    $("#busca>fieldset>input.fulltext-search-box").attr("placeholder", "O que você está buscando?");
+}
+
 function openCart() {
 
     $("div#carrinho").on("click", function () {
@@ -61,7 +68,7 @@ function montarSeletordeSKU() {
     // $("ul#sku_list").append(listaSKus.map(item => `<li>${item}</li>`).join(''))
 
     var listaSKUs = (skuJson_0.skus)
-    
+
     listaSKUs.forEach(codsku => {
         $("ul#sku_list").append(`<li>${codsku.skuname}</li>`)
     });
@@ -69,7 +76,7 @@ function montarSeletordeSKU() {
 }
 
 $(document).ready(function () {
-
+    header();
     addTocart();
     openCart();
     closeCart();
@@ -77,4 +84,10 @@ $(document).ready(function () {
     carrosselMarcas();
 
     $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
+
+    /* disparar click no botão de frete */
+
+    $("div#frete a.shipping-value").trigger("click");
+
+
 });

@@ -2,7 +2,7 @@
 /* LID:  https://equipabr.myvtex.com/?lid=8ae255f6-d495-4cc9-9cab-1bec981acd4f */
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html,
 body,
@@ -131,7 +131,7 @@ body {
     width: 100%;
     font-size: 16px;
     background: #f1f1f1;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter';
 }
 
 textarea {
@@ -365,10 +365,9 @@ div#menu .menu-departamento>h3>a {
     color: #000;
     text-align: center;
     padding: 15px 0;
-    font-size: 13px;
+    font-size: 14px;
     background-position: center 5px;
     background-repeat: no-repeat;
-    text-transform: uppercase;
     position: relative;
 }
 
@@ -1749,8 +1748,8 @@ body.compare table #compare {
 
     div#top-options .text p {
         color: #000;
-        font-weight: 100;
-        font-size: 12px;
+        font-weight: 300;
+        font-size: 11px;
     }
 
     div#top-options .text p.welcome {
@@ -1759,7 +1758,7 @@ body.compare table #compare {
 
     div#top-options .text h4 {
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     div#top-options .fale-conosco,
@@ -3538,6 +3537,10 @@ body.produto div#top-left div#show {
     justify-content: space-between;
 }
 
+body.produto div#top-left div#show div#image {
+    width: 100%;
+}
+
 body.produto div#top-left div#codigo {
     display: flex;
     gap: 4px;
@@ -3701,6 +3704,20 @@ body.produto input.buy-in-page-quantity {
 
 div#frete {
     margin-top: 25px;
+    border-bottom: 1px solid #C7C7C7;
+}
+
+#frete .header,
+#frete .quantity,
+#frete .footer,
+#frete p#popupCalculoFreteWrapper,
+#frete span.cep-busca {
+    display: none;
+}
+
+#frete label.prefixo {
+    font-size: 18px;
+    color: #21354F;
 }
 
 .box-pagamento {
