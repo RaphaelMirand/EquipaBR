@@ -9,7 +9,6 @@ function header() {
     $("div#carrinho").on("click", function () {
         $("header>.minicart").addClass('active');
         $(".bg-shadow").toggle();
-        console.log("opencart")
     });
 
     /* fechar carrinho */
@@ -17,7 +16,6 @@ function header() {
     $(".bg-shadow, .close-minicart").on("click", function () {
         $("header>.minicart").removeClass('active');
         $(".bg-shadow").toggle();
-        console.log("closecart")
     });
 
     // adicionar produto ao carrinho pela vitrine
@@ -60,6 +58,54 @@ function product() {
     /* disparar click no botão de frete */
 
     $("div#frete a.shipping-value").trigger("click");
+
+    /* modificar valor input de quantidade */
+
+    $(".buttons span#plus").on("click", function () {
+        var val_input_old = $("div#quantity-selector input").val();
+        var val_input_new = parseInt(val_input_old) + 1
+        if (val_input_new > 0) {
+            $("div#quantity-selector input").attr("value", val_input_new);
+        }
+    });
+
+    $(".buttons span#minus").on("click", function () {
+        var val_input_old = $("div#quantity-selector input").val();
+        var val_input_new = parseInt(val_input_old) - 1
+        if (val_input_new > 0) {
+            $("div#quantity-selector input").attr("value", `${val_input_new}`);
+        }
+    });
+
+    /* enviar item para o carrinho*/
+
+    jQuery(function ($) {
+        $(".buyButton a.buy-button").click(function (e) {
+            e.preventDefault();
+            $("div#ajaxBusy").fadeIn("fast")
+            var hrefCart = $(".buyButton .buy-button").attr("href");
+            if (hrefCart === "javascript:alert('Por favor, selecione o modelo desejado.');") {
+                alert("Por favor, selecione o modelo desejado");
+            } else {
+                var resURL = hrefCart.split("sku=").pop().split("&qty=").shift();
+                item = {
+                    id: resURL,
+                    quantity: $("#quantity-selector input").val(),
+                    seller: 1
+                };
+                vtexjs.checkout.getOrderForm().then(function (orderForm) {
+                    vtexjs.checkout.addToCart([item]).done(function (orderForm) {
+
+                    });
+                });
+                $("div#ajaxBusy").fadeOut("slow");
+                $(".minicart").toggleClass("cart-active");
+                $("body").toggleClass("body-cart-active");
+                //$("div#minicart").fadeIn("fast").fadeOut(10000);
+            }
+
+        });
+    });
 
     /* mudar texto do botão para "calcular" */
     setTimeout(function () {

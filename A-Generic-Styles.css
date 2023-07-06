@@ -109,6 +109,10 @@ section {
     display: block;
 }
 
+input:focus-visible {
+    outline: 0;
+}
+
 html::-webkit-scrollbar,
 html::-webkit-scrollbar-track {
     background: #dcdcdc;
@@ -236,7 +240,7 @@ header>.minicart .v2-vtexsc-cart {
 }
 
 header>.minicart a#go-to-cart {
-    display: none;
+    /* display: none; */
 }
 
 header>.minicart span#minicart-title {
@@ -279,6 +283,10 @@ header>.minicart .close-minicart::before {
 
 table.vtexsc-productList>thead {
     display: none;
+}
+
+td.cartSkuActions span.cartSkuRemove a.text {
+    display: block !important;
 }
 
 table.vtexsc-productList {
@@ -460,6 +468,11 @@ div#menu .menus-dpt>.menu-departamento>h3 a:hover {
     color: #007FAE;
 }
 
+div#menu .menus-dpt>.menu-departamento>h3.mro,
+div#menu .menus-dpt>.menu-departamento>h3.equipamentos {
+    display: none;
+}
+
 div#menu .menu-departamento>h3::before {
     margin-right: 5px;
 }
@@ -478,6 +491,10 @@ div#menu .menus-dpt>.menu-departamento>h3.ferramentas::before {
 
 div#menu .menus-dpt>.menu-departamento>h3.hidraulica::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.592' height='12.71' viewBox='0 0 9.592 12.71'%3E%3Cg id='noun-water-4942478' transform='translate(-196.512 -70.009)'%3E%3Cpath id='Caminho_3907' data-name='Caminho 3907' d='M201.364,70.01a.444.444,0,0,0-.342.144,31.419,31.419,0,0,0-2.234,2.818c-1.118,1.595-2.276,3.532-2.276,5.189a4.8,4.8,0,0,0,9.592,0c0-1.669-1.138-3.607-2.234-5.2a30.965,30.965,0,0,0-2.192-2.809.443.443,0,0,0-.313-.144Zm-.016,1.12a22.39,22.39,0,0,1,1.8,2.3c1.062,1.54,2.086,3.463,2.086,4.729a3.927,3.927,0,0,1-7.842,0c0-1.242,1.042-3.169,2.124-4.713a22.81,22.81,0,0,1,1.837-2.318Z'/%3E%3Cpath id='Caminho_3908' data-name='Caminho 3908' d='M214.945,84s-4.475,4.877-4.475,7.8a4.439,4.439,0,0,0,8.863,0C219.333,88.841,214.945,84,214.945,84Zm-3.4,8.061a.392.392,0,0,1,.4.245,3.378,3.378,0,0,0,1.9,1.887h0a.373.373,0,0,1,.221.489.384.384,0,0,1-.208.208.4.4,0,0,1-.3.005,4.1,4.1,0,0,1-2.352-2.329.374.374,0,0,1,.232-.484.406.406,0,0,1,.1-.021Z' transform='translate(-13.594 -13.626)'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+div#menu .menus-dpt>.menu-departamento>h3.componentes-eletricos::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.56' height='14.001' viewBox='0 0 9.56 14.001'%3E%3Cg id='noun-ray-5275886' transform='translate(-33.883 -26.398)'%3E%3Cpath id='Caminho_3960' data-name='Caminho 3960' d='M43.413,32.18A.446.446,0,0,0,43,31.9H40.1l2.246-4.867a.445.445,0,0,0-.719-.5l-7.613,7.613a.445.445,0,0,0,.315.76h2.639L34.36,39.744a.445.445,0,0,0,.693.538L43.3,32.669A.445.445,0,0,0,43.413,32.18Z'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
 div#menu .menu-departamento>h3 {
@@ -2890,6 +2907,7 @@ div#page-content {
     border-radius: 5px;
     box-shadow: 0px 0px 6px #0000005E;
     max-width: 1300px;
+    position: relative;
 }
 
 .prateleira.vitrine>h2 {
@@ -3063,7 +3081,7 @@ div#page-content>.vitrine {
     padding-right: 35px;
 }
 
-div#page-content>.vitrine .content-link {
+.content-link {
     position: absolute;
     top: 40px;
     right: 90px;
@@ -3077,13 +3095,13 @@ div#page-content>.vitrine .content-link {
     justify-content: center;
 }
 
-div#page-content>.vitrine .content-link a {
+.content-link a {
     color: #fff;
     font-size: 14px;
     font-weight: 600;
 }
 
-div#page-content>.vitrine .content-link a::after {
+.content-link a::after {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10.689' height='7.965' viewBox='0 0 10.689 7.965'%3E%3Cg id='noun-chevron-2587260' transform='translate(0 7.965) rotate(-90)'%3E%3Cpath id='Caminho_12' data-name='Caminho 12' d='M7.965,2.262V0L3.983,3.983,0,0V2.262L3.983,6.245Z' transform='translate(0 4.444)' fill='%23fff'/%3E%3Cpath id='Caminho_14' data-name='Caminho 14' d='M7.965,2.262V0L3.983,3.983,0,0V2.262L3.983,6.245Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
     margin-left: 5px;
 }
@@ -3759,7 +3777,56 @@ body.produto p.descricao-preco em.valor-por.price-best-price strong.skuBestPrice
     font-size: 35px;
 }
 
-body.produto .buy-button-minicart {
+button.mais,
+button.menos {
+    border: 0;
+    background: transparent;
+}
+
+body.produto div#quantity-selector {
+    display: flex;
+    height: 100%;
+    border: 1px solid #C7C7C7;
+    background: #fff;
+    border-radius: 24px;
+    position: relative;
+}
+
+body.produto div#quantity-selector .buttons {
+    display: grid;
+    position: absolute;
+    right: 13px;
+    top: 2px;
+    justify-items: center;
+    align-items: center;
+}
+
+body.produto div#quantity-selector .buttons span {
+    cursor: pointer;
+}
+
+body.produto .buy-button-minicart .content-quantidade-button button {
+    height: 15px;
+    cursor: pointer;
+}
+
+body.produto .buy-button-minicart .content-quantidade-button .buttons {
+    display: grid;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+body.produto .buyButton a.buy-button {
+    background: #007FAE;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 24px;
+    font-size: 0;
+}
+
+body.produto .buyButton {
     display: grid;
     grid-template-columns: 15% 84%;
     gap: 1%;
@@ -3767,13 +3834,20 @@ body.produto .buy-button-minicart {
     border-bottom: 2px solid #C5C5C5;
 }
 
-body.produto a.buy-in-page-button {
-    background: #007FAE;
-    color: #fff;
+body.produto div#quantity-selector input {
     text-align: center;
-    padding: 10px 0;
-    border-radius: 24px;
-    font-size: 0;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: #21354F;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 30px;
+}
+
+body.produto a.buy-button::before {
+    content: "ADICIONAR AO CARRINHO";
+    font-size: 18px;
 }
 
 body.produto p.pix {
@@ -3784,17 +3858,21 @@ body.produto p.pix {
     margin-top: 10px;
 }
 
-body.produto a.buy-in-page-button::before {
-    content: "ADICIONAR AO CARRINHO";
-    font-size: 18px;
-}
-
 body.produto input.buy-in-page-quantity {
-    border: 1px solid #C7C7C7;
-    border-radius: 24px;
     text-align: center;
+    width: 100%;
+    border: 0;
+    background: transparent;
     color: #21354F;
     font-weight: bold;
+    font-size: 14px;
+    padding: 0 30px;
+}
+
+body.produto input.buy-in-page-quantity::-webkit-outer-spin-button,
+body.produto input.buy-in-page-quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .buy-button-cart {
@@ -3949,6 +4027,7 @@ body #institucionais .inst-content h4 {
     border-bottom: solid #007FAE;
     margin-bottom: 15px;
 }
+
 body #institucionais #sidebar-inst div h4 {
     color: #007FAE;
     text-transform: uppercase;
@@ -3973,6 +4052,7 @@ body #institucionais #sidebar-inst div h4 p {
     font-size: 14px;
     color: #000;
 }
+
 /* Institucional Fim*/
 
 div#product-bottom .description {
