@@ -3537,6 +3537,10 @@ body.produto div#top-left div#show {
     justify-content: space-between;
 }
 
+body.produto div#top-left div#include {
+    margin: auto;
+}
+
 body.produto div#top-left div#show div#image {
     width: 100%;
 }
@@ -3555,7 +3559,8 @@ body.produto .zoomPad {
 }
 
 body.produto #image-main {
-    max-width: 500px;
+    max-width: 350px;
+    max-height: 300px;
     width: 100%;
     height: auto;
     vertical-align: middle;
@@ -3565,13 +3570,9 @@ body.produto .zoomWindow {
     left: 0 !important;
     top: 0 !important;
     width: 100% !important;
-}
-
-body.produto .zoomWindow {
     overflow: hidden;
     top: 0 !important;
-    width: 500px;
-    height: 450px;
+    height: 300px;
     background-color: #fff;
 }
 
@@ -3704,6 +3705,7 @@ body.produto input.buy-in-page-quantity {
 
 div#frete {
     margin-top: 25px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #C7C7C7;
 }
 
@@ -3716,8 +3718,66 @@ div#frete {
 }
 
 #frete label.prefixo {
+    display: flex;
+    width: 100%;
     font-size: 18px;
     color: #21354F;
+    align-items: center;
+}
+
+#frete label.prefixo::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='39.17' height='23.625' viewBox='0 0 39.17 23.625'%3E%3Cg id='delivery-truck' transform='translate(-0.415 -5.415)'%3E%3Cpath id='Caminho_3912' data-name='Caminho 3912' d='M9.455,21.909A3.455,3.455,0,1,0,6,18.455,3.455,3.455,0,0,0,9.455,21.909Zm17.273,0a3.455,3.455,0,1,0-3.455-3.455A3.455,3.455,0,0,0,26.727,21.909Z' transform='translate(3.636 6.545)' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.17'/%3E%3Cpath id='Caminho_3913' data-name='Caminho 3913' d='M16.632,25h8.55V7.036A1.036,1.036,0,0,0,24.145,6H1M9.032,25H5.491a1.036,1.036,0,0,1-1.036-1.036V15.5' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-width='1.17'/%3E%3Cpath id='Caminho_3914' data-name='Caminho 3914' d='M2,9H8.909' transform='translate(0.727 2.182)' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.17'/%3E%3Cpath id='Caminho_3915' data-name='Caminho 3915' d='M15,9h9.69a1.036,1.036,0,0,1,.947.615l3.092,6.957a1.036,1.036,0,0,1,.09.42v4.79a1.036,1.036,0,0,1-1.036,1.036H24.5m-9.5,0h1.727' transform='translate(10.182 2.182)' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-width='1.17'/%3E%3C/g%3E%3C/svg%3E%0A");
+    margin-right: 10px;
+}
+
+
+#frete input#txtCep {
+    display: flex;
+    border: 1px solid #C1C1C1;
+    border-radius: 16px;
+    height: 34px;
+    width: 57%;
+    margin-left: 10px;
+    padding-left: 15px;
+    align-items: center;
+}
+
+#frete div#calculoFrete fieldset {
+    display: flex;
+}
+
+
+#frete input#btnFreteSimulacao {
+    background: #fff;
+    color: #007FAE;
+    border: 1px solid #007FAE;
+    border-radius: 13px;
+    height: 34px;
+    font-size: 17px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 8px;
+}
+
+#frete .freight-values thead>tr {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+#frete .freight-values tbody>tr {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+#frete .freight-values thead>tr>th {
+    text-align: left;
+    padding: 10px 0;
+    font-weight: bold;
+    color: #21354F;
+}
+
+#frete .freight-values tbody>tr {
+    margin-bottom: 10px;
 }
 
 .box-pagamento {

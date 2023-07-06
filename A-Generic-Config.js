@@ -3,6 +3,27 @@ function header() {
     /* placeholder do campo de busca */
 
     $("#busca>fieldset>input.fulltext-search-box").attr("placeholder", "O que você está buscando?");
+
+    /* monta o menu departamentos */
+
+    $("#menu .menu-departamento > h3").each(function () {
+        $(this).append('<div class="dropdown"></div>'),
+            $(this).find(".dropdown").prepend($(this).next())
+    }),
+        $("#menu").css("visibility", "visible")
+
+}
+
+function product() {
+
+    /* disparar click no botão de frete */
+
+    $("div#frete a.shipping-value").trigger("click");
+
+    /* mudar texto do botão para "calcular" */
+    setTimeout(function () {
+        $("#frete input#btnFreteSimulacao").val("Calcular");
+    }, 1000);
 }
 
 function openCart() {
@@ -82,12 +103,9 @@ $(document).ready(function () {
     closeCart();
     vitrinesHome();
     carrosselMarcas();
+    product();
 
     $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
-
-    /* disparar click no botão de frete */
-
-    $("div#frete a.shipping-value").trigger("click");
 
 
 });
