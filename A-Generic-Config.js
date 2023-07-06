@@ -1,19 +1,24 @@
 function header() {
 
+    /* add botão de fechar minicart */
+
+    $("header>.minicart span#minicart-title").prepend("<p class='close-minicart'>Voltar</p>")
+
     /* abrir carrinho */
 
     $("div#carrinho").on("click", function () {
-        $("header>.minicart").toggleClass('active');
+        $("header>.minicart").addClass('active');
         $(".bg-shadow").toggle();
+        console.log("opencart")
     });
 
     /* fechar carrinho */
 
-    $(".bg-shadow").on("click", function () {
-        $("header>.minicart").toggleClass('active');
+    $(".bg-shadow, .close-minicart").on("click", function () {
+        $("header>.minicart").removeClass('active');
         $(".bg-shadow").toggle();
+        console.log("closecart")
     });
-
 
     // adicionar produto ao carrinho pela vitrine
 
