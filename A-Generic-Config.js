@@ -1,5 +1,41 @@
 function header() {
 
+    /* abrir carrinho */
+
+    $("div#carrinho").on("click", function () {
+        $("header>.minicart").toggleClass('active');
+        $(".bg-shadow").toggle();
+    });
+
+    /* fechar carrinho */
+
+    $(".bg-shadow").on("click", function () {
+        $("header>.minicart").toggleClass('active');
+        $(".bg-shadow").toggle();
+    });
+
+
+    // adicionar produto ao carrinho pela vitrine
+
+    $(".prateleira ul li").each(function () {
+        let skuid = $(this).find(".info-product input.buy-button-asynchronous-defaultsku-id").attr("value");
+
+        $(this).find('.shelf-buy').click(function () {
+            console.log(skuid)
+            var item = {
+                id: skuid,
+                quantity: 1,
+                seller: '1'
+            };
+            vtexjs.checkout.addToCart([item], null, 1)
+                .done(function (orderForm) {
+                    alert('Item adicionado!');
+                    console.log(orderForm);
+                });
+        });
+
+    });
+
     /* placeholder do campo de busca */
 
     $("#busca>fieldset>input.fulltext-search-box").attr("placeholder", "O que você está buscando?");
@@ -24,59 +60,35 @@ function product() {
     setTimeout(function () {
         $("#frete input#btnFreteSimulacao").val("Calcular");
     }, 1000);
-}
 
-function openCart() {
+    /* prateleira Quem viu, viu também */
 
-    $("div#carrinho").on("click", function () {
-        $("header>.minicart").toggleClass('active');
-        $(".bg-shadow").toggle();
-    });
-}
-
-function closeCart() {
-
-    $(".bg-shadow").on("click", function () {
-        $("header>.minicart").toggleClass('active');
-        $(".bg-shadow").toggle();
-    });
-}
-
-function addTocart() {
-    // adicionar produto ao carrinho pela vitrine
-
-    $(".prateleira ul li").each(function () {
-        let skuid = $(this).find(".info-product input.buy-button-asynchronous-defaultsku-id").attr("value");
-
-        $(this).find('.shelf-buy').click(function () {
-            console.log(skuid)
-            var item = {
-                id: skuid,
-                quantity: 1,
-                seller: '1'
-            };
-            vtexjs.checkout.addToCart([item], null, 1)
-                .done(function (orderForm) {
-                    alert('Item adicionado!');
-                    console.log(orderForm);
-                });
-        });
-
-    });
-}
-
-function vitrinesHome() {
-    $(".home .vitrine>.prateleira>ul").slick({
+    $(".carrossel .prateleira>ul").slick({
         slidesToShow: 5,
         slidesToScroll: 1
     });
 }
 
-function carrosselMarcas() {
+function home() {
+
+    /* prateleiras produtos home */
+    $(".home .vitrine>.prateleira>ul").slick({
+        slidesToShow: 5,
+        slidesToScroll: 1
+    });
+
+    /* prateleira marcas */
+
     $(".home .carrossel-marcas").slick({
         slidesToShow: 9,
         slidesToScroll: 1
     });
+}
+
+function departamento() {
+
+    /* adicionar "ordenar por" no options de filtragem */
+    $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
 }
 
 function montarSeletordeSKU() {
@@ -93,19 +105,11 @@ function montarSeletordeSKU() {
     listaSKUs.forEach(codsku => {
         $("ul#sku_list").append(`<li>${codsku.skuname}</li>`)
     });
-
 }
 
 $(document).ready(function () {
     header();
-    addTocart();
-    openCart();
-    closeCart();
-    vitrinesHome();
-    carrosselMarcas();
+    home();
     product();
-
-    $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
-
-
+    departamento();
 });
