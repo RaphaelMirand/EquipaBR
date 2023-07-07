@@ -140,21 +140,20 @@ function departamento() {
 
     /* adicionar "ordenar por" no options de filtragem */
     $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
-}
 
-function montarSeletordeSKU() {
-    // var listaSKus = []
-    // $("body.produto div#sku .skuList").each(function () {
-    //     listaSKus.push($(this).children(".nomeSku").text())
-    // });
-    // console.log(listaSKus)
+    /* montar menu de filtros */
 
-    // $("ul#sku_list").append(listaSKus.map(item => `<li>${item}</li>`).join(''))
+    $(".box-filtros .search-single-navigator>h3").each(function () {
+        $(this).children("a").removeAttr("href");
+        $(this).append('<div class="dropdown"></div>'),
+            $(this).find(".dropdown").prepend($(this).siblings(".even"))
 
-    var listaSKUs = (skuJson_0.skus)
+    });
 
-    listaSKUs.forEach(codsku => {
-        $("ul#sku_list").append(`<li>${codsku.skuname}</li>`)
+    /* abrir e fechar menus */
+
+    $(".search-single-navigator h5, .search-single-navigator h3>a").on("click", function () {
+        $(this).toggleClass("close-menu");
     });
 }
 
