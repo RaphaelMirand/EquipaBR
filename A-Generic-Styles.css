@@ -1561,10 +1561,6 @@ body.compare table #compare {
         width: 100%;
     }
 
-    div#sidebar-inst {
-        display: none;
-    }
-
     .inst-content {
         width: 100%;
         padding: 10px 0;
@@ -4024,7 +4020,7 @@ body #institucionais .inst-content h4 {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
-    border-bottom: solid #007FAE;
+    border-bottom: solid 2px #007FAE;
     margin-bottom: 15px;
 }
 
@@ -4033,7 +4029,7 @@ body #institucionais #sidebar-inst div h4 {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
-    border-bottom: solid #007FAE;
+    border-bottom: solid 2px #007FAE;
     margin-bottom: 15px;
 }
 
@@ -4048,9 +4044,78 @@ body #institucionais #sidebar-inst div ul a {
     padding: 5px 0;
 }
 
-body #institucionais #sidebar-inst div h4 p {
+body #institucionais .inst-content p {
     font-size: 14px;
     color: #000;
+    line-height: 27px;
+}
+
+@media (max-width: 992px) {
+    body #institucionais {
+        display: block;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    body #institucionais .inst-content {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    body #institucionais #sidebar-inst {
+        width: 100%;
+        box-shadow: none;
+    }
+    body #institucionais #sidebar-inst div h4 {
+        align-items: center;
+        color: #fff;
+        text-transform: capitalize;
+        background: #007FAE;
+        font-size: 16px;
+        font-weight: bold;
+        height: 32px;
+        display: flex;
+        border-radius: 30px;
+        border-bottom: none;
+        margin-bottom: 0px;
+        justify-content: center;
+        position: relative;
+    }
+
+    body #institucionais #sidebar-inst div h4::after {
+        content: '' !important;
+        border: solid #fff;
+        border-width: 0px 0px 3px 3px;
+        display: inline-block;
+        padding: 4px;
+        right: 25px;
+        bottom: 13px;
+        transform: rotate(-45deg);
+        position: absolute;
+    }
+
+    body #institucionais #sidebar-inst div {
+        position: relative;
+        width: 100%;
+    }
+
+    body #institucionais #sidebar-inst div ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 3px 6px #00000029;
+        padding: 0 10px;
+        border-radius: 5px;
+    }
+    body #institucionais #sidebar-inst div ul.active {
+        display: block;
+    }
+    body #institucionais #sidebar-inst div h4.active::after {
+        border-width: 0px 3px 3px 0px;
+        bottom: 10px;
+    }
 }
 
 /* Institucional Fim*/
