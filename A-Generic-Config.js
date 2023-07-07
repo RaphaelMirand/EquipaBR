@@ -158,7 +158,7 @@ function departamento() {
 }
 
 function institucional() {
-    $("body #institucionais #sidebar-inst div h4").click(function(e) {
+    $("body #institucionais #sidebar-inst div h4").click(function (e) {
         $(this).toggleClass('active');
         $("body #institucionais #sidebar-inst div ul").toggleClass('active');
     });

@@ -893,7 +893,7 @@ div#menu div.prateleira ul li {
 
 
 .prod-nome {
-    min-height: 55px;
+    min-height: 70px;
     display: table;
     text-align: left;
     width: 100%;
@@ -3231,6 +3231,7 @@ div#page-content>.vitrine {
     box-shadow: 0px 0px 6px #0000005E;
     padding-left: 35px;
     padding-right: 35px;
+    padding-bottom: 50px;
 }
 
 .content-link {
@@ -4323,6 +4324,7 @@ body #institucionais .inst-content p {
         width: 100%;
         box-shadow: none;
     }
+
     body #institucionais #sidebar-inst div h4 {
         align-items: center;
         color: #fff;
@@ -4365,9 +4367,11 @@ body #institucionais .inst-content p {
         padding: 0 10px;
         border-radius: 5px;
     }
+
     body #institucionais #sidebar-inst div ul.active {
         display: block;
     }
+
     body #institucionais #sidebar-inst div h4.active::after {
         border-width: 0px 3px 3px 0px;
         bottom: 10px;
