@@ -131,6 +131,20 @@ html::-webkit-scrollbar-thumb {
     padding: 0 20px;
 }
 
+div#barra-principal.mobile {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    div#barra-principal {
+        display: none;
+    }
+
+    div#barra-principal.mobile {
+        display: grid;
+    }
+}
+
 header {
     width: 100%;
     display: inline-block;
@@ -1117,6 +1131,40 @@ div#barra-principal-wrapper {
     align-items: center;
 }
 
+@media(max-width: 900px) {
+    div#barra-principal-wrapper {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 25% 45% 30%;
+    }
+
+    p.welcome {
+        display: none;
+    }
+
+    a#login svg {
+        margin-right: 5px;
+        height: 16px;
+        width: 16px;
+    }
+
+    a#login {
+        display: flex;
+        color: #000;
+        font-size: 8px;
+        font-weight: 600;
+    }
+
+    div#top-options .account {
+        display: flex;
+        align-items: center;
+    }
+
+    div#top-options {
+        display: flex;
+    }
+}
+
 p.preco-de {
     text-align: center;
     margin-bottom: 7px;
@@ -1157,7 +1205,6 @@ div#info-topo {
     width: 100%;
     border-bottom: 1px solid #cbd9e0;
     padding: 10px 0;
-    display: none;
     background: #007FAE;
 }
 
@@ -1186,6 +1233,22 @@ div#info-topo>div ul li a {
     font-size: 14px;
     display: block;
     color: #29447A;
+}
+
+@media(max-width: 900px) {
+    div#info-topo>div {
+        display: block;
+    }
+
+    div#info-topo>div ul {
+        display: block;
+    }
+
+    div#info-topo>div ul li {
+        display: block;
+        text-align: center;
+        font-size: 8px;
+    }
 }
 
 div#news {
@@ -1286,6 +1349,26 @@ input#newsletterClientEmail {
 
 fieldset.success {
     color: #fff;
+}
+
+@media (max-width: 900px) {
+    div#news {
+        height: 100%;
+    }
+
+    div#news>.newsletter {
+        position: unset;
+        height: 100%;
+    }
+
+    div#news>.newsletter>fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div#news .newsletter fieldset>p {
+        width: 100%;
+    }
 }
 
 #busca-vazia {
@@ -1730,12 +1813,6 @@ body.compare table #compare {
         display: none;
     }
 
-    div#busca {
-        order: 3;
-        box-sizing: border-box;
-        margin-bottom: 30px;
-    }
-
     input.fulltext-search-box {
         box-sizing: border-box !important;
         width: 100% !important;
@@ -1761,6 +1838,11 @@ body.compare table #compare {
 
     div#carrinho {
         background-size: 50%;
+    }
+
+    div#carrinho svg {
+        height: 16px;
+        width: 16px;
     }
 
     .shelf-buy {
@@ -1874,24 +1956,6 @@ body.compare table #compare {
     div#logo {
         width: 100% !important;
         text-align: center;
-        margin-bottom: 30px;
-    }
-
-    div#top-options #carrinho {
-        position: absolute;
-        top: 0;
-        right: 0px;
-        width: auto;
-        padding: 0;
-        background-position: center;
-    }
-
-    div#top-options #carrinho>a {
-        display: block;
-        width: 100%;
-        height: 20px;
-        z-index: 9999999;
-        padding: 25px;
     }
 
     div#top-options #carrinho>a>div {
@@ -1927,12 +1991,6 @@ body.compare table #compare {
         display: block;
         padding: 3% 0px 2px 5%;
         font-size: 0.8em;
-    }
-
-    a#login {
-        color: red !important;
-        display: block;
-        padding: 5px 0;
     }
 
     .fa-angle-right:before {
@@ -2827,6 +2885,15 @@ p.txt-cart {
     font-weight: bold;
 }
 
+@media (max-width: 900px) {
+
+    .icon-cart {
+        background: unset;
+        width: auto;
+        height: auto;
+    }
+}
+
 p.flag-desconto {
     position: absolute;
     padding: 5px;
@@ -3046,6 +3113,13 @@ div#page-content {
     align-items: center;
     color: #fff;
     margin-bottom: 0;
+}
+
+@media(max-width: 900px) {
+    .container-carrossel-categorias .container-imagens {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* prateliras */
@@ -3559,6 +3633,18 @@ div#footer .footer-linha-3 ul>li {
 
 div#footer .footer-linha-3 ul>li p {
     font-size: 7px;
+}
+
+@media(max-width: 900px) {
+
+    .topo-footer .box,
+    div#footer .footer-linha-2 .box-pagamento>div,
+    div#footer .footer-linha-2,
+    div#footer .footer-linha-1>div.container,
+    div#footer .footer-linha-3 {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* DEPARTAMENTO */

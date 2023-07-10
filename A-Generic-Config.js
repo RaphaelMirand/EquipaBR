@@ -51,6 +51,17 @@ function header() {
     }),
         $("#menu").css("visibility", "visible")
 
+    if (screen.width < 1024) {
+
+        $("div#info-topo>div ul").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false,
+        });
+    }
+
 }
 
 function product() {
