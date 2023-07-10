@@ -139,7 +139,7 @@ function home() {
 function departamento() {
 
     /* adicionar "ordenar por" no options de filtragem */
-    $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar Por")
+    $("body.departamento fieldset.orderBy select>option:nth-of-type(1)").text("Ordenar por")
 
     /* montar menu de filtros */
 
@@ -149,6 +149,25 @@ function departamento() {
             $(this).find(".dropdown").prepend($(this).siblings(".even"))
 
     });
+
+    /* montar menu filtros busca */
+
+    $("body.departamento.resultado-busca .box-filtros .search-single-navigator>h3").each(function () {
+        $(this).find(".dropdown").prepend($(this).next())
+    });
+
+    /* adicionar termo de busca ao título */
+
+    var termo_busca = vtxctx.searchTerm
+    $("body.departamento.resultado-busca .content-produtos .title-page").append('<h2 class="termo-busca">"' + termo_busca + '"</h2>')
+
+    $("body.departamento.resultado-busca .bread-crumb ul").append('<li>Buscar por "' + termo_busca + '"</li>')
+
+    /* termo busca vazia */
+
+    var termo_vazia = $("meta[name='Abstract']").attr("content");
+
+    $("body.resultado-busca.vazia .bread-crumb ul").append('<li>Buscar por "' + termo_vazia + '"</li>')
 
     /* abrir e fechar menus */
 

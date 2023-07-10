@@ -3563,6 +3563,10 @@ div#footer .footer-linha-3 ul>li p {
 
 /* DEPARTAMENTO */
 
+body.departamento div#page-content {
+    margin-bottom: 15px;
+}
+
 body.departamento .banner-container img {
     width: 100%;
 }
@@ -3640,6 +3644,13 @@ body.departamento .box-filtros {
     padding: 5px;
     border: 1px solid #DEDEDE;
     border-radius: 3px;
+}
+
+.search-single-navigator>h3 .dropdown a {
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .search-single-navigator h4 a,
@@ -3721,6 +3732,7 @@ body.departamento .content-produtos {
 }
 
 body.departamento .content-produtos .title-page {
+    display: flex;
     color: #007FAE;
     font-size: 20px;
     font-weight: bold;
@@ -3749,8 +3761,22 @@ body.departamento span.resultado-busca-numero {
     align-items: center;
 }
 
+body.departamento span.resultado-busca-numero::after {
+    content: "produtos";
+}
+
+body.departamento span.resultado-busca-numero span.label {
+    font-size: 0;
+}
+
+body.departamento span.resultado-busca-numero span.label::before {
+    content: "Foram encontrados";
+    font-size: 16px;
+}
+
 body.departamento span.resultado-busca-numero .value {
     font-weight: bold;
+    color: #007FAE;
 }
 
 body.departamento fieldset.orderBy {
@@ -3771,7 +3797,7 @@ body.departamento fieldset.orderBy select {
 body.departamento .prateleira.vitrine.n4colunas {
     display: flex;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 55px;
     flex-wrap: wrap;
 }
 
@@ -3881,6 +3907,74 @@ p.searchResultsTime:nth-of-type(2) {
     padding: 2.6px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+/* Busca */
+
+body.departamento.resultado-busca .content-produtos .title-page h2.titulo-sessao {
+    font-size: 0;
+}
+
+body.departamento.resultado-busca .content-produtos .title-page h2.titulo-sessao::before {
+    content: "Buscar por ";
+    font-size: 20px;
+}
+
+/* busca vazia */
+
+body.resultado-busca.vazia .container-vazio {
+    background: #fff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 15px 0;
+    padding: 90px 40px 170px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+body.resultado-busca.vazia .container-vazio .box-1 {
+    display: flex;
+    justify-content: center;
+}
+
+body.resultado-busca.vazia .container-vazio .box-1 svg {
+    height: 230px;
+    width: 230px;
+}
+
+body.resultado-busca.vazia .container-vazio .box-2 h3 {
+    font-size: 31px;
+    color: #21354F;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: normal;
+}
+
+body.resultado-busca.vazia .container-vazio .box-2 span {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+body.resultado-busca.vazia .container-vazio .box-2 p {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+body.resultado-busca.vazia .container-vazio .box-2 a {
+    display: inline-block;
+    color: #fff;
+    background-color: #007FAE;
+    border-radius: 30px;
+    font-size: 17px;
+    margin-top: 25px;
+    padding: 15px;
+    width: 225px;
+    text-align: center;
 }
 
 /* PDP */
@@ -4247,6 +4341,10 @@ div#frete {
 }
 
 /* Institucional */
+
+.banner-institucionais img {
+    width: 100%;
+}
 
 body #institucionais {
     width: 90%;
