@@ -3767,10 +3767,43 @@ div#footer .footer-linha-3 ul>li p {
         flex-direction: column;
     }
 
+    div#footer .footer-linha-3 {
+        align-items: center;
+    }
+
+    div#footer .footer-linha-3 p {
+        font-size: 10px;
+    }
+
+    div#footer .footer-linha-3 ul {
+        margin-top: 15px;
+    }
+
     div#footer .footer-linha-1 h6 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-size: 16px;
+    }
+
+    div#footer .footer-linha-2 .box-pagamento h6 {
+        font-size: 16px;
+    }
+
+    div#footer .footer-linha-1 .container div {
+        margin-bottom: 30px;
+    }
+
+    div#footer .footer-linha-1 .container #atendimento-footer .line-1 {
+        margin-bottom: 15px;
+    }
+
+    div#footer .footer-linha-1 h5 {
+        font-size: 13px;
+    }
+
+    div#footer .footer-linha-2 .box-pagamento .icon div {
+        margin-bottom: 20px;
     }
 
     div#footer .footer-linha-1>div.container>div:nth-of-type(1) h6::after {
