@@ -220,6 +220,15 @@
   }
 }
 
+:focus-visible {
+  outline: 0;
+}
+
+.checkout-container {
+  background: #fff;
+  padding: 10px 0;
+}
+
 @media (max-width: 480px) {
   #header {
     background-color: #2982d4;
@@ -263,20 +272,6 @@
     color: #FFF;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 div#menu {
   width: 100%;
@@ -499,10 +494,79 @@ body.body-order-placed div#passos-carrinho {
 .srp-container .srp-content p.srp-description.mw5 {
   color: #5D5D5D;
   font-size: 13px;
+  font-weight: 600;
+  font-family: "Open Sans";
 }
 
 
 form.coupon-form p.coupon-data {
   display: flex;
   justify-content: flex-end;
+}
+
+h1#orderform-title {
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.client-pre-email .btn-success,
+button#go-to-shipping {
+  background: #007FAE !important;
+}
+
+p.link.link-cart.pull-right {
+  background: #FF7104;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+p.link.link-cart.pull-right a {
+  color: #fff;
+}
+
+th.shipping-date {
+  display: none;
+}
+
+td.shipping-date {
+  display: none;
+}
+
+.table thead th.product-price {
+  font-size: 0 !important;
+}
+
+.table thead th.product-price::before {
+  content: "Valor Unitário";
+  font-size: 12px;
+  vertical-align: bottom;
+}
+
+.table thead th.quantity-price {
+  font-size: 0 !important;
+}
+
+.table thead th.quantity-price::before {
+  content: "Valor Total";
+  font-size: 12px;
+  vertical-align: bottom;
+}
+
+form.coupon-form fieldset.coupon-fieldset {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button#cart-coupon-add {
+  background: #FF7104;
+  color: #fff;
+  border: 0;
+}
+
+a#cart-choose-products {
+  background: #007FAE !important;
+  border: 0;
+  border-radius: 5px;
 }
