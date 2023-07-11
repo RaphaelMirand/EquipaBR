@@ -3194,6 +3194,10 @@ div#form-contato {
     font-size: 19px;
 }
 
+#orders-content .vtex-account__menu .vtex-account__menu-links .b--action-primary {
+    border-color: #0050C7;
+}
+
 #orders-content .vtex-account__page .vtex-account__page-body .vtex-profile-form__profile-summary .c-on-disabled {
     margin-right: 10px;
     height: 39px;

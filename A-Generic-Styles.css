@@ -1639,7 +1639,6 @@ p#fale-conosco-ifo {
 
 div.inst-content form {
     width: 50%;
-    padding: 10px 30px;
 }
 
 div.inst-content form input,
@@ -4586,7 +4585,7 @@ div#frete {
 
 body #institucionais {
     width: 90%;
-    margin: 40px auto;
+    margin: 10px auto;
     display: flex;
     justify-content: space-between;
     min-height: 500px;
@@ -4614,20 +4613,22 @@ body #institucionais .inst-content {
 
 body #institucionais .inst-content h4 {
     color: #007FAE;
-    text-transform: uppercase;
+    text-transform: initial;
     font-size: 20px;
     font-weight: bold;
     border-bottom: solid 2px #007FAE;
     margin-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 body #institucionais #sidebar-inst div h4 {
     color: #007FAE;
-    text-transform: uppercase;
+    text-transform: initial;
     font-size: 20px;
     font-weight: bold;
     border-bottom: solid 2px #007FAE;
     margin-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 body #institucionais #sidebar-inst div ul {
@@ -4647,6 +4648,15 @@ body #institucionais .inst-content p {
     line-height: 27px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     ;
+}
+
+body #institucionais .inst-content p span {
+    display: table;
+}
+
+body #institucionais .inst-content p span a {
+    float: right;
+    margin-left: 5px;
 }
 
 body #institucionais .inst-content button#enviar {
@@ -4717,6 +4727,7 @@ body #institucionais .inst-content button#enviar {
         box-shadow: 0px 3px 6px #00000029;
         padding: 0 10px;
         border-radius: 5px;
+        z-index: 99;
     }
 
     body #institucionais #sidebar-inst div ul.active {

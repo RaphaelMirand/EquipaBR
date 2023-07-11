@@ -205,10 +205,10 @@ function departamento() {
 function institucional() {
     $("body #institucionais #sidebar-inst div h4").click(function (e) {
         $(this).toggleClass('active');
-        $("body #institucionais #sidebar-inst div ul").toggleClass('active');
+        $(this).next("ul").toggleClass('active');
     });
 
-    const termo_vazia = $("title").html();
+    const termo_vazia = $("body #institucionais .inst-content h4").html();
     $("body.institucional .bread-crumb ul").append(`<li>${termo_vazia}</li>`);
 }
 
