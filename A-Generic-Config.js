@@ -181,6 +181,9 @@ function institucional() {
         $(this).toggleClass('active');
         $("body #institucionais #sidebar-inst div ul").toggleClass('active');
     });
+
+    const termo_vazia = $("title").html();
+    $("body.institucional .bread-crumb ul").append(`<li>${termo_vazia}</li>`);
 }
 
 $(document).ready(function () {
