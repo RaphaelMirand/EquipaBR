@@ -4493,10 +4493,16 @@ body #institucionais .inst-content p {
     font-size: 14px;
     color: #000;
     line-height: 27px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
 }
 
-body #institucionais .inst-content form button {
+body #institucionais .inst-content button#enviar {
     width: 100%;
+    height: 30px;
+    background: #007FAE;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
 }
 
 @media (max-width: 992px) {
