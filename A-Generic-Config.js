@@ -64,6 +64,21 @@ function header() {
 
 }
 
+function footer() {
+
+    /* menu institucional footer mobile */
+
+    if (screen.width < 1024) {
+        $("div#footer .footer-linha-1>div.container>div:nth-of-type(1) h6").click(function () {
+            $(this).toggleClass("close-menu")
+        });
+
+        $("div#footer .footer-linha-1>div.container>div:nth-of-type(2) h6").click(function () {
+            $(this).toggleClass("close-menu")
+        });
+    }
+}
+
 function product() {
 
     /* disparar click no botão de frete */
@@ -199,6 +214,7 @@ function institucional() {
 
 $(document).ready(function () {
     header();
+    footer();
     home();
     product();
     departamento();

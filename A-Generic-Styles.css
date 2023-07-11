@@ -1135,7 +1135,13 @@ div#barra-principal-wrapper {
     div#barra-principal-wrapper {
         display: grid;
         align-items: center;
-        grid-template-columns: 25% 45% 30%;
+        grid-template-columns: 25% 38% 37%;
+        padding-bottom: 5px;
+        padding-top: 15px;
+    }
+
+    div#busca {
+        margin-bottom: 10px;
     }
 
     p.welcome {
@@ -1162,6 +1168,7 @@ div#barra-principal-wrapper {
 
     div#top-options {
         display: flex;
+        margin-left: 10px;
     }
 }
 
@@ -1274,6 +1281,26 @@ div#news>.newsletter {
     border-radius: 8px 0 0 8px;
 }
 
+div#news input.bt-voltar.newsletter-button-back {
+    float: right;
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    padding: 5px 15px;
+    background: #FF7104;
+    font-size: 14px;
+    border-radius: 13px;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    text-transform: capitalize;
+}
+
+div#news fieldset.error {
+    float: left;
+    color: #fff;
+}
+
 div#news>.newsletter>fieldset {
     display: flex;
     align-items: center;
@@ -1354,20 +1381,59 @@ fieldset.success {
 @media (max-width: 900px) {
     div#news {
         height: 100%;
+        padding-right: 4px;
+        padding-left: 4px;
     }
 
     div#news>.newsletter {
+        display: flex;
         position: unset;
         height: 100%;
+        padding-top: 10px;
+        border-radius: 8px;
+        flex-direction: column;
+    }
+
+    div#news input.bt-voltar.newsletter-button-back {
+        float: right;
+        position: unset;
+        width: 90%;
+        margin: 20px auto;
     }
 
     div#news>.newsletter>fieldset {
         display: flex;
         flex-direction: column;
+        margin: auto;
+        text-align: center;
     }
 
     div#news .newsletter fieldset>p {
         width: 100%;
+        clip-path: unset;
+        padding: 30px 25px;
+        gap: 5px;
+        margin-bottom: 25px;
+    }
+
+    div#news .newsletter fieldset>p::after {
+        width: 100%;
+    }
+
+    input#newsletterClientName,
+    input#newsletterClientEmail {
+        width: 90%;
+        margin: auto;
+    }
+
+    input#newsletterClientName {
+        margin-bottom: 8px;
+    }
+
+    #newsletterButtonOK {
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
 
@@ -1827,9 +1893,36 @@ body.compare table #compare {
 @media screen and (max-width: 1024px) {
 
     #busca>fieldset>input.btn-buscar {
-        margin-left: -15%;
-        padding: 16px 10px;
         width: 15%;
+        position: unset;
+        background-size: 13px;
+        padding: 0;
+    }
+
+    div#busca fieldset.busca {
+        display: flex;
+        align-items: center;
+        border: 1px solid #C1C1C1;
+        color: #888888;
+        text-indent: 3%;
+        background: #fff;
+        padding: 5px 0;
+        box-sizing: border-box;
+        outline: none;
+        width: 100%;
+        border-radius: 26px;
+        height: 30px;
+    }
+
+    #busca>fieldset>input.fulltext-search-box {
+        border: 0;
+        padding: 0;
+        padding-left: 10px;
+        font-size: 10px;
+    }
+
+    #busca>fieldset>input.fulltext-search-box::placeholder {
+        font-size: 10px;
     }
 
     div.consulta {
@@ -1838,6 +1931,7 @@ body.compare table #compare {
 
     div#carrinho {
         background-size: 50%;
+        margin-left: 10px;
     }
 
     div#carrinho svg {
@@ -1944,8 +2038,14 @@ body.compare table #compare {
     }
 
     div#logo a img {
-        max-width: 100px;
+        max-width: 120px;
         width: 100%;
+        margin: auto;
+        height: auto;
+    }
+
+    .menu-mobile svg {
+        width: 20px;
         height: auto;
     }
 
@@ -1956,10 +2056,6 @@ body.compare table #compare {
     div#logo {
         width: 100% !important;
         text-align: center;
-    }
-
-    div#top-options #carrinho>a>div {
-        display: none !important;
     }
 
     a.close-search {
@@ -2888,9 +2984,25 @@ p.txt-cart {
 @media (max-width: 900px) {
 
     .icon-cart {
-        background: unset;
-        width: auto;
-        height: auto;
+        background-size: 16px;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    ul.cart-info {
+        height: 12px;
+        width: 12px;
+    }
+
+    a#login i {
+        display: flex;
+        align-items: center;
+    }
+
+    em.amount-products-em {
+        font-size: 7px;
+        padding-left: 1px;
     }
 }
 
@@ -3119,6 +3231,10 @@ div#page-content {
     .container-carrossel-categorias .container-imagens {
         display: flex;
         flex-direction: column;
+    }
+
+    .container-carrossel-categorias .container-imagens>div {
+        margin: auto;
     }
 }
 
@@ -3438,6 +3554,12 @@ div#page-content>.vitrine {
     width: 200px;
 }
 
+@media(max-width: 900px) {
+    .topo-footer {
+        display: none;
+    }
+}
+
 /* whatsapp flutuante */
 
 .whatsapp-flutuante {
@@ -3644,6 +3766,36 @@ div#footer .footer-linha-3 ul>li p {
     div#footer .footer-linha-3 {
         display: flex;
         flex-direction: column;
+    }
+
+    div#footer .footer-linha-1 h6 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    div#footer .footer-linha-1>div.container>div:nth-of-type(1) h6::after {
+        content: "";
+        border: solid black;
+        border-width: 0 1.5px 1.5px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    div#footer .footer-linha-1>div.container>div:nth-of-type(2) h6::after {
+        content: "";
+        border: solid black;
+        border-width: 0 1.5px 1.5px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    div#footer .footer-linha-1 h6.close-menu+ul {
+        display: none;
     }
 }
 
@@ -4493,7 +4645,8 @@ body #institucionais .inst-content p {
     font-size: 14px;
     color: #000;
     line-height: 27px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    ;
 }
 
 body #institucionais .inst-content button#enviar {
