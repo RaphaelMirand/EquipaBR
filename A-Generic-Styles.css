@@ -43,7 +43,6 @@ sub,
 sup,
 tt,
 var,
-b,
 u,
 i,
 center,
@@ -3232,8 +3231,12 @@ div#page-content {
         flex-direction: column;
     }
 
-    .container-carrossel-categorias .container-imagens>div {
-        margin: auto;
+    .container-carrossel-categorias .container-imagens>div:not(:first-child, :last-child) {
+        clip-path: none;
+    }
+
+    .container-carrossel-categorias {
+        display: block;
     }
 }
 

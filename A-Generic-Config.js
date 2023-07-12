@@ -160,6 +160,11 @@ function home() {
         slidesToShow: 9,
         slidesToScroll: 1
     });
+
+    $(".container-carrossel-categorias .container-imagens").slick({
+        slidesToShow: 2,
+        slidesToScroll: 2
+    });
 }
 
 function departamento() {
