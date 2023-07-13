@@ -161,10 +161,12 @@ function home() {
         slidesToScroll: 1
     });
 
-    $(".container-carrossel-categorias .container-imagens").slick({
-        slidesToShow: 2,
-        slidesToScroll: 2
-    });
+    if($(window).width() < 900) {
+        $(".container-carrossel-categorias .container-imagens").slick({
+            slidesToShow: 2,
+            slidesToScroll: 2
+        });
+    }
 }
 
 function departamento() {

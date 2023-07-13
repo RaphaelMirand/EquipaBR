@@ -3238,6 +3238,18 @@ div#page-content {
     .container-carrossel-categorias {
         display: block;
     }
+
+    .container-carrossel-categorias .container-imagens>div {
+        margin-right: 0px;
+    }
+
+    .container-carrossel-categorias .container-imagens>div img {
+        clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+    }
+
+    .banner-duplo {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
 }
 
 /* prateliras */
@@ -4250,6 +4262,25 @@ body.resultado-busca.vazia .container-vazio .box-2 a {
     text-align: center;
 }
 
+@media(max-width: 900px) {
+    body.resultado-busca.vazia .container-vazio {
+        grid-template-columns: repeat(1, 1fr) !important;
+        padding: 40px 40px 60px;
+    }
+
+    body.resultado-busca.vazia .container-vazio .box-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body.resultado-busca.vazia .container-vazio .box-2 h3, 
+    body.resultado-busca.vazia .container-vazio .box-2 p {
+        text-align: center;
+    }
+    
+}
+
 /* PDP */
 
 body.produto div#product-top {
@@ -4377,6 +4408,14 @@ body.produto div#top-right .imageSku {
 body.produto .linha-4 .box-pagamento ul {
     display: flex;
     gap: 10px;
+}
+
+body.produto p.preco-a-vista {
+    display: none !important;
+}
+
+body.produto .economia-de {
+    display: none !important;
 }
 
 body.produto p.descricao-preco em.valor-por.price-best-price {
@@ -4611,6 +4650,52 @@ div#frete {
     color: #21354F;
     font-weight: 600;
     margin-bottom: 5px;
+}
+
+@media (max-width: 992px) {
+    body.produto div#product-top {
+        display: flex;
+        padding-right: 10px;
+        padding-left: 10px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    body.produto div#top-left div#show {
+        flex-direction: row;
+    }
+
+    body.produto div#top-right .linha-1 {
+        grid-template-columns: 75% 25%;
+    }
+
+    .box-pagamento>div {
+        flex-direction: column;
+    }
+
+    body.produto div#top-left {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    div#product-bottom .description {
+        display: block !important;
+        padding: 25px 20px !important;
+    }
+
+    div#product-bottom .description .descript-2 {
+        margin-top: 15px;
+    }
+
+    body.produto .buyButton {
+        grid-template-columns: 20% 79%;
+        gap: 1%; 
+    }
+
+    body.produto div#quantity-selector input {
+        padding: 0 10px;
+    }
 }
 
 /* Institucional */
