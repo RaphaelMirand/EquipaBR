@@ -1203,6 +1203,10 @@ a#cart-choose-products {
     padding: 0;
   }
 
+  .empty-cart-content {
+    padding: 5px;
+  }
+
   footer.footer {
     margin-top: 15px;
     margin-bottom: 5px;

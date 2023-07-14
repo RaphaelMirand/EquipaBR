@@ -2296,14 +2296,18 @@ div#vtexIdContainer {
 
 .vtexIdUI {
     font-family: 'Lato', sans-serif !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
     border: 0 !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 3px 6px #00000029 !important;
 }
 
 .vtexIdUI .modal-header {
     background: #fff;
     border: 0;
+}
+
+div#vtexIdContainer .vtexIdUI .modal-body {
+    padding-top: 0;
 }
 
 .vtexIdUI i[class*="vtexid-icon-"],
@@ -2323,22 +2327,67 @@ div#vtexIdContainer {
 
 .vtexIdUI .vtexIdUI-providers-list .btn {
     position: relative;
-    font: bold 14px 'Lato', sans-serif;
     color: #000 !important;
     box-shadow: none !important;
-    border-radius: 0 !important;
+    border-radius: 4px !important;
     background: #e6e6e6 !important;
-    text-transform: uppercase;
     border: 0 !important;
     text-shadow: none !important;
     text-indent: 15px;
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
+    height: 43px;
+}
+
+button#loginWithAccessKeyBtn {
+    background: #007FAE !important;
+    color: #fff !important;
+    margin-top: 0;
+}
+
+.vtexIdUI .vtexIdUI-providers-list #loginWithAccessKeyBtn::after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28.128' height='21.096' viewBox='0 0 28.128 21.096'%3E%3Cpath id='_8665305_envelope_email_icon' data-name='8665305_envelope_email_icon' d='M14.064,79.822a4.2,4.2,0,0,1-2.591-.9L0,70v12.46A2.637,2.637,0,0,0,2.637,85.1H25.491a2.637,2.637,0,0,0,2.637-2.637V70L16.657,78.927A4.232,4.232,0,0,1,14.064,79.822ZM.895,68.466l11.658,9.07a2.463,2.463,0,0,0,3.025,0l11.658-9.07a2.482,2.482,0,0,0,.893-1.829A2.637,2.637,0,0,0,25.491,64H2.637A2.637,2.637,0,0,0,0,66.637,2.319,2.319,0,0,0,.895,68.466Z' transform='translate(0 -64)' fill='%23fff'/%3E%3C/svg%3E%0A") center no-repeat #fff;
+    background-size: 25px !important;
+    background-color: #007FAE;
+    margin-right: 10px;
 }
 
 .vtexIdUI .vtexIdUI-providers-list #loginWithAccessKeyBtn::before {
     font-size: 14px;
     /* content: 'Receber chave de acesso por email'; */
+}
+
+.vtexIdUI #vtexIdUI-google-plus {
+    background-color: #D95032 !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.vtexIdUI .vtexIdUI-providers-list #vtexIdUI-google-plus::after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26.153' height='26.684' viewBox='0 0 26.153 26.684'%3E%3Cg id='_7123025_logo_google_g_icon' data-name='7123025_logo_google_g_icon' transform='translate(-30.025 -29.098)'%3E%3Cpath id='Caminho_1' data-name='Caminho 1' d='M88.718,69.5a16.687,16.687,0,0,0-.233-2.7H75.9v5.145h7.209a6.064,6.064,0,0,1-2.674,4.04l4.3,3.343A13.12,13.12,0,0,0,88.718,69.5Z' transform='translate(-32.541 -26.743)' fill='%23fff'/%3E%3Cpath id='Caminho_2' data-name='Caminho 2' d='M46.817,94.655a12.763,12.763,0,0,0,8.836-3.226l-4.3-3.314A8.093,8.093,0,0,1,39.318,83.9L34.9,87.3A13.328,13.328,0,0,0,46.817,94.655Z' transform='translate(-3.458 -38.873)' fill='%23fff'/%3E%3Cpath id='Caminho_3' data-name='Caminho 3' d='M35.86,62.946a8.105,8.105,0,0,1,0-5.116L31.442,54.4a13.359,13.359,0,0,0,0,11.975Z' transform='translate(0 -17.947)' fill='%23fff'/%3E%3Cpath id='Caminho_4' data-name='Caminho 4' d='M46.817,34.389a7.279,7.279,0,0,1,5.116,2.006l3.808-3.837A12.84,12.84,0,0,0,46.817,29.1,13.328,13.328,0,0,0,34.9,36.453l4.418,3.43A7.981,7.981,0,0,1,46.817,34.389Z' transform='translate(-3.458)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A") center no-repeat #D95032;
+    background-size: 25px !important;
+    background-color: #D95032;
+    margin-right: 10px;
+}
+
+.vtexIdUI #vtexIdUI-facebook {
+    background-color: #315C98 !important;
+    color: #fff !important;
+}
+
+button#loginWithUserAndPasswordBtn {
+    background: #fff !important;
+    border: 2px solid #007FAE !important;
+    color: #007FAE !important;
+    font-weight: 500;
+}
+
+.vtexIdUI .vtexIdUI-providers-list #vtexIdUI-facebook::after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.297' height='28.778' viewBox='0 0 15.297 28.778'%3E%3Cpath id='_5305153_fb_facebook_facebook_logo_icon' data-name='5305153_fb_facebook_facebook logo_icon' d='M134.217,16.065l.793-5.169H130.05V7.542a2.584,2.584,0,0,1,2.914-2.792h2.255V.349a27.5,27.5,0,0,0-4-.349c-4.085,0-6.754,2.475-6.754,6.957V10.9h-4.54v5.169h4.54v12.5a18.075,18.075,0,0,0,5.588,0v-12.5Z' transform='translate(-119.922)' fill='%23fff'/%3E%3C/svg%3E%0A") center no-repeat;
+    background-color: #315C98;
+    background-size: 12px !important;
+    color: #fff !important;
+    margin-right: 10px;
 }
 
 *,
@@ -2364,28 +2413,16 @@ div#vtexIdContainer {
     background-size: contain !important;
 }
 
-.vtexIdUI .vtexIdUI-providers-list #loginWithAccessKeyBtn::after {
-    background: url(/arquivos/login-inbox.png) center no-repeat #fff;
-}
-
-.vtexIdUI .vtexIdUI-providers-list #vtexIdUI-facebook::after {
-    background: url(/arquivos/login-facebook.png) center no-repeat;
-    background-color: #3b5998;
-}
-
-.vtexIdUI .vtexIdUI-providers-list #vtexIdUI-google-plus::after {
-    background: url(/arquivos/login-g-plus.png) center no-repeat #D95032;
-}
-
-.vtexIdUI .vtexIdUI-providers-list #loginWithUserAndPasswordBtn::after {
-    background: url(/arquivos/login-mail.png) center no-repeat #000;
-}
-
 .vtexIdUI .modal-header {
     padding: 15px 0px 10px 0 !important;
     border: 0 !important;
-    background: url(/arquivos/logo.png) 10px center no-repeat #fff !important;
+    /*background: url(/arquivos/logo.png) 10px center no-repeat #fff !important;*/
     background-size: 40px !important;
+    background-color: #fff !important;
+}
+
+.vtexIdUI .modal-header .vtexIdUI-heading {
+    margin: 0;
 }
 
 .vtexIdUI label {
@@ -2406,11 +2443,19 @@ div#vtexIdContainer {
 }
 
 .vtexIdUI .vtexIdUI-heading>span {
-    font-size: 14px;
+    font-size: 16px;
     display: table;
-    margin: 0 auto;
     font-weight: normal;
     letter-spacing: 0.3px;
+    padding: 0 15px;
+    color: #707070;
+    width: 80%;
+    text-align: left;
+}
+
+.vtexIdUI .modal-header .close {
+    top: 10% !important;
+    right: 2% !important;
 }
 
 .vtexIdUI .modal-footer {
@@ -2434,21 +2479,35 @@ a.vtexIdUI-back-link.pull-left.dead-link {
     margin-top: 10px;
 }
 
-h4.vtexIdUI-heading {
-    text-indent: 40px;
+.vtexIdUI .btn-success {
+    background: #007FAE !important;
+    border-radius: 4px !important;
+    font-size: 14px;
+    padding: 8px 15px;
 }
 
 .vtexIdUI .modal-header .close {
-    background: #000 !important;
-    top: 0px !important;
-    right: 0 !important;
+    background: #D95032 !important;
+    top: 10px !important;
+    right: 10px !important;
     cursor: pointer;
     display: table;
     margin: 0 !important;
+    border-radius: 100%;
+    line-height: normal !important;
+    height: 19px;
+    width: 19px;
 }
 
 .vtexIdUI h4 {
     text-align: center;
+}
+
+@media (max-width: 900px) {
+
+    .vtexIdUI .vtexIdUI-providers-list .btn {
+        font-size: 9px;
+    }
 }
 
 /******************************************************* ORÃ‡AMENTO ********************************************************************/
@@ -4274,11 +4333,11 @@ body.resultado-busca.vazia .container-vazio .box-2 a {
         align-items: center;
     }
 
-    body.resultado-busca.vazia .container-vazio .box-2 h3, 
+    body.resultado-busca.vazia .container-vazio .box-2 h3,
     body.resultado-busca.vazia .container-vazio .box-2 p {
         text-align: center;
     }
-    
+
 }
 
 /* PDP */
@@ -4690,7 +4749,7 @@ div#frete {
 
     body.produto .buyButton {
         grid-template-columns: 20% 79%;
-        gap: 1%; 
+        gap: 1%;
     }
 
     body.produto div#quantity-selector input {
