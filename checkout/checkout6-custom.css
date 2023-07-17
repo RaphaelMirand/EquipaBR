@@ -6,6 +6,10 @@
 
 /* /files/checkout-custom.css */
 
+body {
+  padding: 0;
+}
+
 li::marker {
   font-size: 0;
   display: none;
@@ -248,55 +252,6 @@ li::marker {
 
   .locale {
     display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .copy-right .devs {
-    width: 100%;
-    text-align: center;
-  }
-
-  #header {
-    background-color: #2982d4;
-    color: #fff;
-    height: 45px;
-    width: 100%;
-    padding: 0 10px;
-    margin-left: -10px;
-  }
-
-  #header button.back {
-    background-color: transparent;
-    border: none;
-    float: left;
-    margin: 10px;
-    color: #fff;
-    border: 0;
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: normal;
-    padding: 0;
-  }
-
-  #header button.back .arrow {
-    width: 17px;
-    height: 23px;
-    background-image: url('/arquivos/playkids-mobile-sprite.png');
-    background-size: 320px auto;
-    background-repeat: no-repeat;
-    background-position: -177px -60px;
-    float: left;
-  }
-
-  #header h1 {
-    float: right;
-    margin: 3px 0 0;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 25px;
-    width: 93px;
-    height: 26px;
-    color: #FFF;
   }
 }
 
@@ -613,10 +568,531 @@ footer.footer {
   }
 }
 
-@media (max-width: 600px) {
-  #cart-choose-more-products {
-    padding: 15px 0 5px;
+.note {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  @import "http://fonts.googleapis.com/css?family=Oswald:400,300";
+
+  body {
+    padding-top: 0px;
   }
+
+  .container {
+    width: 1170px;
+  }
+
+  .container-cart {
+    width: 90%;
+  }
+
+  .container-order-form {
+    width: 90%;
+  }
+
+  .masthead {
+    padding: 10px 5px 0;
+  }
+
+  .masthead h3 {
+    font-size: 24.5px;
+    margin: 10px 0;
+  }
+
+  .masthead h1,
+  .masthead h2,
+  .masthead h3 {
+    line-height: 40px;
+  }
+
+  .masthead h1,
+  .masthead h2,
+  .masthead h3,
+  .masthead h4,
+  .masthead h5,
+  .masthead h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+  }
+
+  #footerCredits {
+    background-color: #F5F5F5;
+    padding: 60px 10px;
+  }
+
+  #footerCredits img {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  h1.lead {
+    margin-top: 0;
+  }
+
+  .valor-por {
+    font-size: 36px;
+    margin-top: 4px;
+    display: block;
+    line-height: 140%;
+  }
+
+  .descricao-preco {
+    margin-top: 10px;
+  }
+
+  .buy-button {
+    float: right;
+    width: 30%;
+    font-weight: bold;
+  }
+
+  nav {
+    display: block;
+  }
+
+  .nav {
+    margin-bottom: 20px;
+    margin-left: 0;
+    list-style: none;
+  }
+
+  .nav>li>a {
+    display: block;
+    font-size: 14px;
+  }
+
+  .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #eeeeee;
+  }
+
+  .nav>li>a>img {
+    max-width: none;
+  }
+
+  .nav>.pull-right {
+    float: right;
+  }
+
+  .nav-tabs>li,
+  .nav-pills>li {
+    float: left;
+  }
+
+  .nav-tabs>li>a,
+  .nav-pills>li>a {
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: 2px;
+    line-height: 14px;
+  }
+
+  .nav-pills>li>a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  .product-name .brand-name,
+  .product-name .seller {
+    display: none;
+  }
+
+  .steps-view {
+    width: 422px;
+  }
+
+  .mini-cart {
+    text-shadow: 0 1px 0px #fff;
+    position: relative;
+  }
+
+  .mini-cart .summary-template-holder,
+  .mini-cart h2 {
+    background: #f7f7f7;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px dotted #eee;
+    padding-top: 8px;
+  }
+
+  .mini-cart .cart-template-holder {
+    background: #fff;
+    border-right: 3px solid #F7F7F7;
+    border-left: 3px solid #F7F7F7;
+  }
+
+  .mini-cart h2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 4px 6px;
+    text-align: right;
+    color: #aaa;
+    margin-bottom: 0;
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .mini-cart .cart {
+    margin-bottom: 0;
+    padding: 1px 3px 6px 5px;
+  }
+
+  .mini-cart .monetary,
+  .mini-cart .quantity-price {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .mini-cart .cart table tbody tr td.quantity-price {
+    float: right;
+    margin-right: 6px;
+  }
+
+  .mini-cart .info {
+    text-align: right;
+    width: 58%;
+  }
+
+  .mini-cart .info,
+  .mini-cart .monetary {
+    padding-top: 6px;
+  }
+
+  .mini-cart .table tfoot td {
+    color: #468847;
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 12px;
+  }
+
+  .mini-cart .product-item {
+    padding-bottom: 6px;
+  }
+
+  .mini-cart .product-item .shipping-date,
+  .mini-cart .product-item .quantity-price {
+    font-size: 11px;
+    padding: 10px 0 4px 0;
+  }
+
+  .mini-cart .totalizers {
+    margin-bottom: 10px;
+  }
+
+  .mini-cart .link-cart {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .locale {
+    display: none;
+  }
+}
+
+:focus-visible {
+  outline: 0;
+}
+
+.checkout-container {
+  background: #fff;
+  padding: 10px 0;
+}
+
+div#menu {
+  width: 100%;
+  margin: 0px auto 0 auto;
+  visibility: hidden;
+}
+
+div#menu .menu-departamento {
+  width: 92%;
+  position: relative;
+  margin: 0 auto;
+  display: table;
+}
+
+div#menu .menu-departamento>h3>a {
+  color: #fff;
+  text-align: center;
+  padding: 45px 5px 6px 5px !important;
+  font-size: 12px;
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  position: relative;
+  top: 20px;
+}
+
+div#menu .menu-departamento>h3 {
+  width: 16.4%;
+  float: left;
+  text-align: center;
+  display: table;
+  /* position: relative; */
+  /* background-size: 30px!important; */
+  margin: 0 !important;
+  line-height: 60px !important;
+}
+
+div#menu .menu-departamento>h3:hover {
+  background-color: #007caf !important;
+}
+
+div#menu .menu-departamento>h3.instrumentos {
+  background: url(/arquivos/menu-instrumentos.png) no-repeat center 5px;
+  background-size: 25px !important;
+}
+
+div#menu .menu-departamento>h3.hidraulica {
+  background: url(/arquivos/menu-hidraulica.png) no-repeat center 8px;
+  background-size: 35px !important;
+}
+
+div#menu .menu-departamento>h3.componentes-eletricos {
+  background: url(/arquivos/menu-componentes.png) no-repeat center 5px;
+  background-size: 30px !important;
+}
+
+div#menu .menu-departamento>h3.ferramentas {
+  background: url(/arquivos/menu-ferramentas.png) no-repeat center 7px;
+  background-size: 32px !important;
+}
+
+div#menu .menu-departamento>h3.mro {
+  background: url(/arquivos/menu-mro.png) no-repeat center 10px;
+  background-size: 35px !important;
+}
+
+div#menu .menu-departamento>h3:hover>.dropdown {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+div#menu .menu-departamento>h3.mro>.dropdown {
+  margin-left: -15%;
+}
+
+div#menu .menu-departamento>h3>.dropdown {
+  position: absolute;
+  visibility: hidden;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  opacity: 0;
+  padding: 20px 10px;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid #848484;
+  margin-top: 0;
+  width: 50%;
+  box-shadow: 3px 3px 10px #000;
+  pointer-events: none;
+}
+
+div#menu .menu-departamento>h3>.dropdown>ul {
+  display: table;
+  float: left;
+  width: 55%;
+}
+
+div#menu .menu-departamento>h3>.dropdown>ul>li {
+  display: table;
+  text-align: left;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+div#menu .menu-departamento>h3>.dropdown>ul>li>a {
+  display: table;
+  color: #696969;
+  font-size: 14px;
+  text-indent: 10px;
+}
+
+div#menu .menu-departamento>h3>.dropdown .prateleira-menu {
+  display: table;
+  float: right;
+  width: 35%;
+  /* margin-right: 5%; */
+}
+
+div#menu .menu-departamento>h3>.dropdown .prateleira-menu h2 {
+  display: none;
+}
+
+div#menu {
+  display: table;
+  width: 100%;
+  border-bottom: 5px solid #007caf;
+  background: #013148;
+  position: relative;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+div.header {
+  background: #fff;
+  margin-bottom: 25px;
+  border-top: 12px solid #007FAE;
+  display: block;
+  padding: 40px 85px;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+div.header .container.text-center>a {
+  display: flex;
+}
+
+div.header .container.text-center>a img {
+  width: 240px;
+  height: auto;
+}
+
+#orderplaced-footer>footer>div>div {
+  width: 100% !important;
+}
+
+#orderplaced-footer>div>div {
+  width: 100% !important;
+}
+
+div#passos-carrinho {
+  display: table;
+  width: 100%;
+  height: 100px;
+  display: none;
+}
+
+body.body-cart div#passos-carrinho {
+  background: url(/arquivos/carrinho-passo1.png) no-repeat center;
+  background-size: 50%;
+}
+
+body.body-order-form div#passos-carrinho {
+  background: url(/arquivos/carrinho-passo2.png) no-repeat center;
+  background-size: 50%;
+}
+
+body.body-order-placed div#passos-carrinho {
+  background: url(/arquivos/carrinho-passo3.png) no-repeat center;
+  background-size: 50%;
+}
+
+.srp-container {
+  background: #F8F8F8;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 1px;
+}
+
+.srp-container .srp-content h2.srp-main-title {
+  font-size: 23px;
+  color: #000;
+  font-weight: bold;
+}
+
+.srp-container .srp-content p.srp-description.mw5 {
+  color: #5D5D5D;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Open Sans";
+}
+
+
+form.coupon-form p.coupon-data {
+  display: flex;
+  justify-content: flex-end;
+}
+
+h1#orderform-title {
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.client-pre-email .btn-success,
+button#go-to-shipping {
+  background: #007FAE !important;
+}
+
+p.link.link-cart.pull-right {
+  background: #FF7104;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+p.link.link-cart.pull-right a {
+  color: #fff;
+}
+
+th.shipping-date {
+  display: none;
+}
+
+td.shipping-date {
+  display: none;
+}
+
+.table thead th.product-price {
+  font-size: 0 !important;
+}
+
+.table thead th.product-price::before {
+  content: "Valor Unitário";
+  font-size: 12px;
+  vertical-align: bottom;
+}
+
+.table thead th.quantity-price {
+  font-size: 0 !important;
+}
+
+.table thead th.quantity-price::before {
+  content: "Valor Total";
+  font-size: 12px;
+  vertical-align: bottom;
+}
+
+form.coupon-form fieldset.coupon-fieldset {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button#cart-coupon-add {
+  background: #FF7104;
+  color: #fff;
+  border: 0;
+}
+
+a#cart-choose-products {
+  background: #007FAE !important;
+  border: 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
 
   #cart-to-orderform {
     margin-top: 10px
@@ -646,6 +1122,162 @@ footer.footer {
   }
 }
 
-.note {
-  display: block;
+@media (max-width: 480px) {
+  #header {
+    background-color: #2982d4;
+    color: #fff;
+    height: 45px;
+    width: 100%;
+    padding: 0 10px;
+    margin-left: -10px;
+  }
+
+  #header button.back {
+    background-color: transparent;
+    border: none;
+    float: left;
+    margin: 10px;
+    color: #fff;
+    border: 0;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: normal;
+    padding: 0;
+  }
+
+  #header button.back .arrow {
+    width: 17px;
+    height: 23px;
+    background-image: url('/arquivos/playkids-mobile-sprite.png');
+    background-size: 320px auto;
+    background-repeat: no-repeat;
+    background-position: -177px -60px;
+    float: left;
+  }
+
+  #header h1 {
+    float: right;
+    margin: 3px 0 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 25px;
+    width: 93px;
+    height: 26px;
+    color: #FFF;
+  }
+}
+
+@media (max-width:1024px) {
+
+  div.header>div>a>img {
+    width: 40% !important;
+  }
+
+  div.header {
+    background: #fff;
+    margin-bottom: 25px;
+    border-top: 12px solid #007FAE;
+    display: block;
+    padding: 20px 30px;
+    box-shadow: 0px 3px 6px #00000029;
+  }
+
+  .body-cart {
+    padding: 0;
+  }
+
+  body .container h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+    padding: 0 5px;
+  }
+
+  div#menu {
+    display: none;
+  }
+}
+
+@media(max-width:900px) {
+
+  .checkout-container {
+    background: #fff;
+    padding: 0;
+  }
+
+  .empty-cart-content {
+    padding: 5px;
+  }
+
+  footer.footer {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-top: 3px solid #007FAE;
+  }
+
+  .cart-fixed {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .footer-linha-2,
+  .footer-linha-2 .box-pagamento>div,
+  .footer-linha-3 {
+    display: grid;
+    grid-template-columns: unset;
+  }
+
+  .cart-links-bottom {
+    margin: 10px 0 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .copy-right .devs {
+    width: 100%;
+    text-align: center;
+  }
+
+  #header {
+    background-color: #2982d4;
+    color: #fff;
+    height: 45px;
+    width: 100%;
+    padding: 0 10px;
+    margin-left: -10px;
+  }
+
+  #header button.back {
+    background-color: transparent;
+    border: none;
+    float: left;
+    margin: 10px;
+    color: #fff;
+    border: 0;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: normal;
+    padding: 0;
+  }
+
+  #header button.back .arrow {
+    width: 17px;
+    height: 23px;
+    background-image: url('/arquivos/playkids-mobile-sprite.png');
+    background-size: 320px auto;
+    background-repeat: no-repeat;
+    background-position: -177px -60px;
+    float: left;
+  }
+
+  #header h1 {
+    float: right;
+    margin: 3px 0 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 25px;
+    width: 93px;
+    height: 26px;
+    color: #FFF;
+  }
 }
