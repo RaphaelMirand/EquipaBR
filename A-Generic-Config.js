@@ -285,6 +285,10 @@ function departamento() {
     $(".search-single-navigator h5, .search-single-navigator h3>a").on("click", function () {
         $(this).toggleClass("close-menu");
     });
+
+    $(".menu-navegue").on("click", function () {
+        $(".search-single-navigator").toggleClass("active");
+    });
 }
 
 function institucional() {
