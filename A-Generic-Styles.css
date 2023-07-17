@@ -217,7 +217,7 @@ img {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 9999999999;
+    z-index: 999;
     perspective: 800px;
     background: rgba(0, 0, 0, 0.4);
 }
@@ -1134,9 +1134,14 @@ div#barra-principal-wrapper {
     div#barra-principal-wrapper {
         display: grid;
         align-items: center;
-        grid-template-columns: 25% 38% 37%;
+        grid-template-columns: 24% 38% 38%;
         padding-bottom: 5px;
         padding-top: 15px;
+    }
+
+    .menu-mobile {
+        display: block;
+        margin-right: auto;
     }
 
     div#busca {
@@ -1168,6 +1173,19 @@ div#barra-principal-wrapper {
     div#top-options {
         display: flex;
         margin-left: 10px;
+    }
+
+    /* menu mobile */
+
+    .container-menus-mobile {
+        display: none;
+        position: fixed;
+        width: 70%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 999;
     }
 }
 
@@ -3048,8 +3066,8 @@ p.txt-cart {
     }
 
     ul.cart-info {
-        height: 12px;
-        width: 12px;
+        height: 15px;
+        width: 15px;
     }
 
     a#login i {
@@ -3223,6 +3241,10 @@ div#page-content {
     background: #F1F1F1;
 }
 
+.container-banner-principal.mobile {
+    display: none;
+}
+
 .container-carrossel-categorias {
     display: grid;
     background: #fff;
@@ -3285,6 +3307,19 @@ div#page-content {
 }
 
 @media(max-width: 900px) {
+
+    .container {
+        margin: 0 5px;
+    }
+
+    .container-banner-principal {
+        display: none;
+    }
+
+    .container-banner-principal.mobile {
+        display: block;
+    }
+
     .container-carrossel-categorias .container-imagens {
         display: flex;
         flex-direction: column;
@@ -3296,6 +3331,7 @@ div#page-content {
 
     .container-carrossel-categorias {
         display: block;
+        margin-top: 5px;
     }
 
     .container-carrossel-categorias .container-imagens>div {
@@ -3308,6 +3344,10 @@ div#page-content {
 
     .banner-duplo {
         grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .container-carrossel-categorias .container-imagens>div:last-child {
+        clip-path: unset;
     }
 }
 

@@ -62,6 +62,16 @@ function header() {
         });
     }
 
+
+    /* abrir e fechar menu mobile */
+
+    $(".menu-mobile").on("click", function () {
+        $(".container-menus-mobile, .bg-shadow").fadeIn();
+    });
+
+    $(".bg-shadow").on("click", function () {
+        $(".container-menus-mobile, .bg-shadow").fadeOut();
+    });
 }
 
 function footer() {
@@ -161,10 +171,15 @@ function home() {
         slidesToScroll: 1
     });
 
-    if($(window).width() < 900) {
+    /* carrossel de categorias no mobile */
+
+    console.log("categorias")
+
+    if ($(window).width() < 900) {
         $(".container-carrossel-categorias .container-imagens").slick({
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 2,
+            arrows: false
         });
     }
 }
