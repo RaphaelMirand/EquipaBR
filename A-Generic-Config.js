@@ -148,6 +148,15 @@ function product() {
 
 function home() {
 
+    /* banner full */
+
+    $(".container-banner-principal>div").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+    });
+
     /* prateleiras produtos home */
     $(".home .vitrine>.prateleira>ul").slick({
         slidesToShow: 5,
@@ -179,7 +188,7 @@ function departamento() {
     /* montar menu filtros busca */
 
     $("body.departamento.resultado-busca .box-filtros .search-single-navigator>h3").each(function () {
-        $(this).find(".dropdown").prepend($(this).next())
+        $(this).find(".dropdown").prepend($(this).next("ul"))
     });
 
     /* adicionar termo de busca ao título */
@@ -210,6 +219,7 @@ function institucional() {
 
     const termo_vazia = $("body #institucionais .inst-content h4").html();
     $("body.institucional .bread-crumb ul").append(`<li>${termo_vazia}</li>`);
+
 }
 
 $(document).ready(function () {

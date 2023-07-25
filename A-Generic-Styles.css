@@ -858,6 +858,10 @@ div#menu div.prateleira ul li {
     font-size: 12px;
 }
 
+.bread-crumb ul li strong {
+    display: flex;
+}
+
 .bread-crumb ul li:first-child a {
     display: flex;
     align-items: center;
@@ -1164,6 +1168,7 @@ div#barra-principal-wrapper {
     div#top-options .account {
         display: flex;
         align-items: center;
+        gap: 5px;
     }
 
     div#top-options {
@@ -1645,7 +1650,7 @@ div.inst-content form input,
 div.inst-content form select,
 div.inst-content form textarea {
     padding: 10px 0px 10px 10px;
-    color: #909090;
+    color: #000;
     box-shadow: 0px 1px 0px 0px #DEDEDE inset;
     border: 1px solid #B3B3B3;
     display: table;
@@ -2187,8 +2192,14 @@ body.compare table #compare {
     }
 
     div#top-options .text h4 {
+        display: flex;
+        gap: 3px;
         font-weight: 600;
         font-size: 13px;
+    }
+
+    div#top-options .text h4>a {
+        color: #000;
     }
 
     div#top-options .fale-conosco,
@@ -2201,8 +2212,12 @@ body.compare table #compare {
     div#top-options .account a {
         display: flex;
         align-items: center;
-        gap: 5px;
         text-decoration: none;
+    }
+
+    div#top-options .account,
+    div#top-options .fale-conosco a {
+        gap: 5px;
     }
 
     div#logo {
@@ -3161,6 +3176,20 @@ div#form-contato {
 
 /* new home */
 
+.container-banner-principal.mobile {
+    display: none;
+}
+
+.container-banner-principal .slick-prev {
+    left: 10px;
+    background: #0D0F10;
+}
+
+.container-banner-principal .slick-next {
+    right: 10px;
+    background: #0D0F10;
+}
+
 div#page-content {
     background: #F1F1F1;
 }
@@ -3448,6 +3477,14 @@ div#page-content>.vitrine {
     margin-left: 5px;
 }
 
+body.departamento.resultado-busca .prateleira {
+    padding-top: 20px;
+}
+
+body.departamento.resultado-busca .prateleira>ul {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .prateleira {
     padding-top: 1px;
@@ -4031,6 +4068,12 @@ body.departamento fieldset.orderBy select {
     padding-left: 10px;
 }
 
+body.departamento .prateleira.vitrine>ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 body.departamento .prateleira.vitrine.n4colunas {
     display: flex;
     width: 100%;
@@ -4038,16 +4081,16 @@ body.departamento .prateleira.vitrine.n4colunas {
     flex-wrap: wrap;
 }
 
-.prateleira.vitrine.n4colunas>ul {
-    display: flex;
-    gap: 10px;
-}
-
 body.departamento .prateleira ul>li {
     border: 1px solid #E6E6E6;
-    margin-bottom: 10px;
+    margin-bottom: 1%;
     border-radius: 5px;
-    width: 25%;
+    width: 24%;
+    margin-right: 1%;
+}
+
+body.departamento .prateleira {
+    padding-top: 20px;
 }
 
 .prateleira ul>li .prod-nome {
