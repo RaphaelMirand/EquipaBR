@@ -51,6 +51,17 @@ function header() {
     }),
         $("#menu").css("visibility", "visible")
 
+    /* monta o menu departamentos mobile */
+
+    $(".container-menus-mobile .menu-departamento > h3").each(function () {
+        $(this).append('<div class="dropdown"></div>'),
+            $(this).find(".dropdown").prepend($(this).next())
+    })
+
+    $(".container-menus-mobile .menu-departamento>h3").on("click", function () {
+        $(this).toggleClass("open-menu");
+    });
+
     if (screen.width < 1024) {
 
         $("div#info-topo>div ul").slick({
@@ -62,6 +73,16 @@ function header() {
         });
     }
 
+
+    /* abrir e fechar menu mobile */
+
+    $(".menu-mobile").on("click", function () {
+        $(".container-menus-mobile, .bg-shadow").fadeIn();
+    });
+
+    $(".bg-shadow").on("click", function () {
+        $(".container-menus-mobile, .bg-shadow").fadeOut();
+    });
 }
 
 function footer() {
@@ -160,15 +181,79 @@ function home() {
     /* prateleiras produtos home */
     $(".home .vitrine>.prateleira>ul").slick({
         slidesToShow: 5,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
     });
 
     /* prateleira marcas */
 
     $(".home .carrossel-marcas").slick({
         slidesToShow: 9,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
     });
+
+    /* carrossel de categorias no mobile */
+
+    console.log("categorias")
+
+    if ($(window).width() < 900) {
+        $(".container-carrossel-categorias .container-imagens").slick({
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows: false
+        });
+    }
 }
 
 function departamento() {
@@ -208,6 +293,10 @@ function departamento() {
 
     $(".search-single-navigator h5, .search-single-navigator h3>a").on("click", function () {
         $(this).toggleClass("close-menu");
+    });
+
+    $(".menu-navegue").on("click", function () {
+        $(".search-single-navigator").toggleClass("active");
     });
 }
 
