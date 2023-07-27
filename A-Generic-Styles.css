@@ -449,6 +449,12 @@ header>.minicart span.vtexsc-totalCart {
     font-size: 17px;
 }
 
+@media (max-width: 900px) {
+    header>.minicart {
+        width: 90%;
+    }
+}
+
 /**/
 
 div#ajaxBusy {
@@ -474,7 +480,8 @@ ul.ui-autocomplete {
     max-width: 500px;
     width: 100%;
     border: 1px solid #c2c2c2;
-    box-sizing: border-box
+    box-sizing: border-box;
+    z-index: 9999 !important;
 }
 
 ul.ui-autocomplete li {
@@ -905,6 +912,16 @@ div#menu div.prateleira ul li {
     margin-right: 10px;
 }
 
+body.institucional .bread-crumb {
+    padding: 15px 40px;
+}
+
+@media (max-width: 900px) {
+    .bread-crumb {
+        padding: 15px 10px;
+    }
+}
+
 
 .prod-nome {
     min-height: 70px;
@@ -1173,7 +1190,7 @@ div#barra-principal-wrapper {
 
     .topo-menu-mobile .fale-conosco a .text p {
         font-size: 11px;
-        font-weight: 100;
+        font-weight: 300;
     }
 
     .topo-menu-mobile a#login svg {
@@ -3487,6 +3504,8 @@ div#page-content {
     background: #fff;
     padding-top: 10px;
     padding-bottom: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -3513,12 +3532,17 @@ body.vazia div.prateleira ul li {
     border: 1px solid #E6E6E6;
     border-radius: 5px;
     margin-right: 15px;
+    min-height: 465px;
 }
 
 body.home div.prateleira .slick-list,
 body.produto div.prateleira .slick-list,
 body.vazia div.prateleira .slick-list {
     margin-left: 12px;
+}
+
+body.produto .carrossel {
+    max-width: 1366px;
 }
 
 body .slick-prev,
@@ -3589,6 +3613,10 @@ body .slick-next:focus {
     text-transform: uppercase;
 }
 
+.prateleira ul li p.outOfStock {
+    text-align: center;
+}
+
 .prateleira ul li div.price .right-preco>a>em {
     display: table;
     color: #007FAE;
@@ -3635,7 +3663,7 @@ body .slick-next:focus {
 
 .prateleira ul li .shelf-buy {
     display: flex;
-    margin: 20px auto;
+    margin: 20px 5px;
     background-color: #FF7104;
     border-radius: 21px;
     box-sizing: border-box;
@@ -3721,8 +3749,11 @@ div#page-content>.vitrine {
         margin: 15px 0;
     }
 
-    body.home div.prateleira ul li {
+    body.home div.prateleira ul li,
+    body.produto div.prateleira ul li,
+    body.vazia div.prateleira ul li {
         margin-right: 5px;
+        min-height: 319px;
     }
 
     .prateleira ul li .shelf-buy>span {
@@ -3797,7 +3828,17 @@ div#page-content>.vitrine {
     }
 
     .prateleira ul li .shelf-buy>span {
-        font-size: 10px;
+        font-size: 9px;
+    }
+
+    .prateleira ul li p.outOfStock {
+        font-size: 12px;
+    }
+
+    .carrossel {
+        padding-left: 25px;
+        padding-right: 26px;
+        padding-bottom: 20px;
     }
 }
 
@@ -3978,6 +4019,10 @@ div#footer .footer-linha-1 h5 {
     margin-bottom: 10px;
 }
 
+div#atendimento-footer ul.line-2>li {
+    display: grid;
+}
+
 div#footer .footer-linha-1>div.container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -4149,6 +4194,8 @@ div#footer .footer-linha-3 ul>li p {
 
     div#footer .footer-linha-3 {
         align-items: center;
+        padding: 10px 20px;
+        margin: auto;
     }
 
     div#footer .footer-linha-3 p {
@@ -4171,11 +4218,19 @@ div#footer .footer-linha-3 ul>li p {
     }
 
     div#footer .footer-linha-1 .container div {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     div#footer .footer-linha-1 .container #atendimento-footer .line-1 {
         margin-bottom: 15px;
+    }
+
+    div#footer .footer-linha-1 .container #atendimento-footer .line-1>li {
+        padding-bottom: 4px;
+    }
+
+    div#footer .footer-linha-1 .container #atendimento-footer .line-2>li {
+        display: grid;
     }
 
     div#footer .footer-linha-1 h5 {
@@ -4860,6 +4915,7 @@ body.produto div#top-right .imageSku {
 
 body.produto .linha-4 .box-pagamento ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -5124,6 +5180,7 @@ div#frete {
 
     .box-pagamento>div {
         flex-direction: column;
+        gap: 10px;
     }
 
     body.produto div#top-left {
@@ -5142,12 +5199,102 @@ div#frete {
     }
 
     body.produto .buyButton {
-        grid-template-columns: 20% 79%;
+        grid-template-columns: 25% 74%;
         gap: 1%;
+        padding-bottom: 15px;
     }
 
     body.produto div#quantity-selector input {
         padding: 0 10px;
+        padding-left: 0;
+    }
+
+    body.produto div#top-left div#nome {
+        font-size: 19px;
+    }
+
+    body.produto p.descricao-preco em.valor-por.price-best-price {
+        font-size: 20px;
+    }
+
+    body.produto p.descricao-preco em.valor-por.price-best-price {
+        font-size: 28px;
+    }
+
+    body.produto div#preco-sku p.descricao-preco {
+        display: grid;
+        gap: 3px;
+    }
+
+    body.produto p.pix {
+        font-size: 12px;
+    }
+
+    body.produto a.buy-button::before {
+        font-size: 12px;
+    }
+
+    body.produto div#quantity-selector .buttons {
+        right: 12px;
+        top: 0px;
+    }
+
+    .buy-button-cart a.buy-button.buy-button-ref::before {
+        font-size: 14px;
+    }
+
+    #frete label.prefixo {
+        font-size: 11px;
+    }
+
+    .buy-button-cart {
+        margin-top: 15px;
+    }
+
+    #frete input#btnFreteSimulacao {
+        font-size: 12px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    body.produto div#top-right {
+        padding: 20px 3px 10px 10px;
+    }
+
+    #frete label.prefixo::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.17' height='13.625' viewBox='0 0 39.17 23.625'%3E%3Cg id='delivery-truck' transform='translate(-0.415 -5.415)'%3E%3Cpath id='Caminho_3912' data-name='Caminho 3912' d='M9.455,21.909A3.455,3.455,0,1,0,6,18.455,3.455,3.455,0,0,0,9.455,21.909Zm17.273,0a3.455,3.455,0,1,0-3.455-3.455A3.455,3.455,0,0,0,26.727,21.909Z' transform='translate(3.636 6.545)' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.17'/%3E%3Cpath id='Caminho_3913' data-name='Caminho 3913' d='M16.632,25h8.55V7.036A1.036,1.036,0,0,0,24.145,6H1M9.032,25H5.491a1.036,1.036,0,0,1-1.036-1.036V15.5' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-width='1.17'/%3E%3Cpath id='Caminho_3914' data-name='Caminho 3914' d='M2,9H8.909' transform='translate(0.727 2.182)' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.17'/%3E%3Cpath id='Caminho_3915' data-name='Caminho 3915' d='M15,9h9.69a1.036,1.036,0,0,1,.947.615l3.092,6.957a1.036,1.036,0,0,1,.09.42v4.79a1.036,1.036,0,0,1-1.036,1.036H24.5m-9.5,0h1.727' transform='translate(10.182 2.182)' fill='none' stroke='%2321354f' stroke-linecap='round' stroke-width='1.17'/%3E%3C/g%3E%3C/svg%3E%0A");
+        margin-right: 5px;
+    }
+
+    #frete input#txtCep {
+        height: 25px;
+        width: 45%;
+    }
+
+    #frete input#btnFreteSimulacao {
+        height: 25px;
+    }
+
+    div#frete {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    #frete div#calculoFrete fieldset {
+        display: flex;
+        gap: 4px;
+    }
+
+    .box-pagamento h6 {
+        font-size: 13px;
+    }
+
+    body.produto p.descricao-preco em.valor-por.price-best-price strong.skuBestPrice {
+        font-size: 27px;
+    }
+
+    div#product-bottom .description .title {
+        margin-bottom: 15px;
     }
 }
 
@@ -5159,6 +5306,7 @@ div#frete {
 
 body #institucionais {
     width: 90%;
+    max-width: 1366px;
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
@@ -5391,10 +5539,6 @@ div#caracteristicas table tbody>tr:nth-child(odd) {
         overflow-x: hidden;
     }
 
-    .menu-departamento ul {
-        display: none;
-    }
-
     .menu-departamento h3 {
         padding: 20px 25px;
         border-top: 1px solid #E9E9E9;
@@ -5414,12 +5558,12 @@ div#caracteristicas table tbody>tr:nth-child(odd) {
 
     a.menu-item-texto {
         color: #000000;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .container-menus-mobile .titulo {
         color: #000000;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: bold;
         padding: 10px 25px;
     }

@@ -83,6 +83,26 @@ function header() {
     $(".bg-shadow").on("click", function () {
         $(".container-menus-mobile, .bg-shadow").fadeOut();
     });
+
+    /* LGPD */
+
+    // $(document).ready(function () {
+
+    //     if (document.cookie.indexOf("LGPD=1") !== -1) {
+    //     }
+    //     else {
+    //         $(".LGPD").show();
+
+    //         var dataAtual = new Date();
+    //         var dataExpiracao = new Date(dataAtual.getTime() + (24 * 60 * 60 * 1000)); // adiciona 1 dia em milissegundos
+    //         var dataExpiracaoUTC = dataExpiracao.toUTCString(); // converte a data para string
+
+    //         $(".LGPD-fechar").click(function () {
+    //             $(".LGPD").hide();
+    //             document.cookie = "LGPD=1; expired=" + dataExpiracaoUTC + " path=/"; // altera a data de expiração do cookie
+    //         });
+    //     }
+    // });
 }
 
 function footer() {
@@ -163,7 +183,33 @@ function product() {
 
     $(".carrossel .prateleira>ul").slick({
         slidesToShow: 5,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
     });
 }
 
@@ -235,8 +281,6 @@ function home() {
     });
 
     /* carrossel de categorias no mobile */
-
-    console.log("categorias")
 
     if ($(window).width() < 900) {
         $(".container-carrossel-categorias .container-imagens").slick({
