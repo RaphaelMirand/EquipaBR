@@ -3700,6 +3700,11 @@ body .slick-next:focus {
     cursor: pointer;
 }
 
+.prateleira ul li .shelf-buy:hover {
+    background: #007FAE;
+    transition: 0.5s;
+}
+
 .prateleira ul li .shelf-buy>span {
     color: #fff;
     font-size: 13px;
@@ -4002,7 +4007,7 @@ body.departamento.resultado-busca .prateleira>ul {
 }
 
 .topo-footer .box p.text {
-    opacity: 70%;
+    opacity: 90%;
     font-size: 12px;
     font-weight: 200;
     line-height: normal;
@@ -4052,7 +4057,7 @@ div#footer .footer-linha-1 h6 {
 }
 
 div#footer .footer-linha-1 h5 {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -4934,6 +4939,11 @@ body.produto div#top-right .linha-1 {
     grid-template-columns: 60% 40%;
 }
 
+body.produto p.descricao-preco {
+    display: grid;
+    gap: 5px;
+}
+
 ul#sku_list {
     display: flex;
     flex-wrap: wrap;
@@ -5411,9 +5421,7 @@ body #institucionais #sidebar-inst div ul a {
 body #institucionais .inst-content p {
     font-size: 14px;
     color: #000;
-    line-height: 27px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    ;
+    line-height: normal;
 }
 
 body #institucionais .inst-content p span {
@@ -5531,6 +5539,23 @@ div#product-bottom .description .title {
 div#product-bottom .description .productDescription {
     font-size: 15px;
     font-weight: 500;
+    line-height: normal;
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+div#product-bottom .description .productDescription::-webkit-scrollbar,
+div#product-bottom .description .productDescription::-webkit-scrollbar-track {
+    background: #dcdcdc;
+    border-radius: 5px;
+    width: 10px;
+}
+
+div#product-bottom .description .productDescription::-webkit-scrollbar-thumb {
+    background: #007FAE;
+    border-radius: 5px;
 }
 
 div#caracteristicas>h4 {
