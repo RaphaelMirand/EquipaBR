@@ -521,6 +521,10 @@ div#menu .menus-dpt {
     align-items: center;
 }
 
+.menus-dpt .todos-dpt .container-menus>div:not(.menu-departamento) {
+    display: none;
+}
+
 .todos-dpt {
     height: 100%;
     display: flex;
@@ -528,6 +532,10 @@ div#menu .menus-dpt {
     align-items: center;
     font-weight: bold;
     font-size: 14px;
+}
+
+div#menu .menus-dpt>div:not(.todos-dpt, .menu-departamento) {
+    display: none;
 }
 
 .menus-dpt .todos-dpt:hover>.container-menus {
@@ -3603,6 +3611,18 @@ body .slick-next:hover {
     background: #E64409;
 }
 
+body .slick-prev.slick-disabled:hover,
+body .slick-next.slick-disabled:hover {
+    background: #E9E9E9;
+}
+
+body .slick-prev.slick-disabled:focus,
+body .slick-next.slick-disabled:focus {
+    color: #fff;
+    outline: none;
+    background: #E9E9E9;
+}
+
 body .slick-next:before {
     content: ">";
 }
@@ -3959,6 +3979,11 @@ body.departamento.resultado-busca .prateleira>ul {
     background-color: #fff;
     box-shadow: 0px 0px 6px #0000005E;
     border-radius: 5px;
+}
+
+.carrossel-marcas .slick-track {
+    display: flex;
+    align-items: center;
 }
 
 .carrossel-marcas .slick-list {
@@ -4382,7 +4407,6 @@ body.departamento .box-filtros {
     padding: 2.5px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    margin-right: 10px;
 }
 
 .search-single-navigator h3>a.close-menu::after {
@@ -4395,6 +4419,25 @@ body.departamento .box-filtros {
     padding: 5px;
     border: 1px solid #DEDEDE;
     border-radius: 3px;
+    padding-right: 13px;
+}
+
+.search-single-navigator>h3 .dropdown {
+    max-height: 90px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.search-single-navigator>h3 .dropdown::-webkit-scrollbar,
+.search-single-navigator>h3 .dropdown::-webkit-scrollbar-track {
+    background: #dcdcdc;
+    border-radius: 5px;
+    width: 7px;
+}
+
+.search-single-navigator>h3 .dropdown::-webkit-scrollbar-thumb {
+    background: #007FAE;
+    border-radius: 5px;
 }
 
 .search-single-navigator>h3 .dropdown a {
@@ -4463,10 +4506,117 @@ body.departamento .box-filtros {
     border-radius: 0px 0px 3px 3px;
 }
 
+body.departamento .box-filtros .menu-departamento>div {
+    display: grid;
+}
+
 .search-single-navigator ul.Marca li a {
     color: #000;
     font-size: 14px;
     margin-bottom: 10px;
+}
+
+.search-multiple-navigator {
+    display: grid !important;
+    order: 3;
+}
+
+.search-multiple-navigator>fieldset {
+    padding: 5px;
+    border: 1px solid #DEDEDE;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding-right: 13px;
+}
+
+.search-multiple-navigator>fieldset>div label {
+    display: flex;
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.search-multiple-navigator>fieldset>div label input[type="checkbox" i] {
+    margin: 0 3px;
+}
+
+.search-multiple-navigator>fieldset>h5 {
+    display: flex;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-multiple-navigator>fieldset>h5.open-menu {
+    margin-bottom: 0;
+}
+
+.search-multiple-navigator>fieldset>h5.open-menu+div {
+    display: none;
+}
+
+.search-multiple-navigator>fieldset>h5::after {
+    content: "";
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.search-multiple-navigator>fieldset>h5.open-menu::after {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+
+.search-multiple-navigator>.bt-refinar.search-filter-button {
+    background: #FF7104;
+    color: #fff;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    order: 999999999999;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+}
+
+.search-multiple-navigator>.bt-refinar.search-filter-button::before {
+    content: "Aplicar Filtros";
+    font-size: 14px;
+}
+
+.search-multiple-navigator>fieldset>div {
+    display: grid;
+    max-height: 90px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.search-multiple-navigator>fieldset>div::-webkit-scrollbar,
+.search-multiple-navigator>fieldset>div::-webkit-scrollbar-track {
+    background: #dcdcdc;
+    border-radius: 5px;
+    width: 7px;
+}
+
+.search-multiple-navigator>fieldset>div::-webkit-scrollbar-thumb {
+    background: #007FAE;
+    border-radius: 5px;
+}
+
+.search-single-navigator .HideMarca,
+.search-single-navigator .Marca,
+.search-single-navigator .ESPECIFICAÇÃO.TÉCNICA,
+.search-multiple-navigator>h3,
+.search-multiple-navigator>h4 {
+    display: none;
 }
 
 @media(max-width: 900px) {

@@ -215,15 +215,15 @@ function home() {
     /* prateleiras produtos home */
     $(".home .vitrine>.prateleira>ul").slick({
         slidesToShow: 5,
-        slidesToScroll: 1,
-        infinite: true,
+        slidesToScroll: 2,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
+                    infinite: false,
                 }
             },
             {
@@ -231,7 +231,7 @@ function home() {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: true,
+                    infinite: false,
                 }
             },
             {
@@ -239,7 +239,7 @@ function home() {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: true,
+                    infinite: false,
                 }
             }
         ]
@@ -302,6 +302,10 @@ function departamento() {
         $(this).append('<div class="dropdown"></div>'),
             $(this).find(".dropdown").prepend($(this).siblings(".even"))
 
+    });
+
+    $(".box-filtros .search-multiple-navigator>fieldset>h5").on("click", function () {
+        $(this).toggleClass("open-menu");
     });
 
     /* montar menu filtros busca */
