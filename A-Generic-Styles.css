@@ -976,25 +976,76 @@ div.price>a>em:last-child {
 }
 
 .owl-prev {
-    left: -25px !important;
-    background-image: url(/arquivos/left-arrow.png);
+    left: -40px !important;
+
 }
 
 .owl-next {
-    right: -25px !important;
-    background-image: url(/arquivos/right-arrow.png);
+    right: -40px !important;
 }
-
 
 .owl-next,
 .owl-prev {
-    width: 20px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute !important;
     top: 150px !important;
     background-size: 100%;
     background-repeat: no-repeat;
     font-size: 0;
+    background-color: #E9E9E9;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    height: 35px;
+    width: 30px;
+    z-index: 1;
+}
+
+body .owl-prev:hover,
+body .owl-next:hover {
+    background: #E64409;
+}
+
+.owl-next::before {
+    content: ">";
+}
+
+.owl-prev::before {
+    content: "<";
+}
+
+.owl-next::before,
+.owl-prev::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    opacity: 1;
+    background: unset;
+    color: #fff;
+    padding-bottom: 3px;
+}
+
+@media (max-width: 900px) {
+
+    .owl-next,
+    .owl-prev {
+        height: 30px;
+        width: 25px;
+    }
+
+    .owl-prev {
+        left: -27px !important;
+        top: 40% !important;
+    }
+
+    .owl-next {
+        right: -27px !important;
+        top: 40% !important;
+    }
 }
 
 body.home div.prateleira ul li:hover .shelf-buy,
@@ -3747,8 +3798,8 @@ div#page-content>.vitrine {
     border-radius: 5px;
     max-width: 1300px;
     box-shadow: 0px 0px 6px #0000005E;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 50px;
 }
 
@@ -3790,12 +3841,17 @@ body.departamento.resultado-busca .prateleira>ul {
     padding-top: 1px;
 }
 
+
+/* .vitrine {
+    visibility: hidden;
+} */
+
 @media(max-width: 900px) {
 
     div#page-content>.vitrine {
         margin: 5px;
-        padding-left: 25px;
-        padding-right: 26px;
+        padding-left: 30px;
+        padding-right: 30px;
         padding-bottom: 20px;
         box-shadow: 0px 0px 3px #0000005E;
     }
