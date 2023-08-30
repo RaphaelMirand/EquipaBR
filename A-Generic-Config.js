@@ -378,6 +378,65 @@ function institucional() {
     const termo_vazia = $("body #institucionais .inst-content h4").html();
     $("body.institucional .bread-crumb ul").append(`<li>${termo_vazia}</li>`);
 
+    /* fale conosco */
+
+    // function enviar() {
+    //     var usuario = {
+    //         "name": $("#nome").val(),
+    //         "sobrenome": $("#sobrenome").val(),
+    //         "email": $("#email-contato").val(),
+    //         "telefone": $("#telefone").val(),
+    //         "tipo": $("#tipo").val(),
+    //         "mensagem": $("#mensagem").val()
+    //     }
+
+    //     $.ajax({
+    //         url: '/api/dataentities/FC/documents',
+    //         type: 'put',
+    //         dataType: 'json',
+    //         contentType: 'application/json',
+
+    //         success: function (datas) {
+    //             console.log("Enviado")
+    //             $('div.inst-content form').hide();
+    //             $('body #institucionais .inst-content').append("<p>Agradecemos a sua mensagem, entraremos em contato em breve!</p>");
+    //         },
+
+    //         data: JSON.stringify(usuario)
+    //     });
+    // }
+
+    $("div.inst-content form").submit(function (event) {
+        event.preventDefault();
+
+        var formData = {
+            "name": $("#nome").val(),
+            "sobrenome": $("#sobrenome").val(),
+            "email": $("#email-contato").val(),
+            "telefone": $("#telefone").val(),
+            "tipo": $("#tipo").val(),
+            "mensagem": $("#mensagem").val()
+        }
+
+
+        $.ajax({
+            url: '/api/dataentities/FC/documents',
+            accept: "application/vnd.vtex.ds.v10 json",
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(formData),
+
+            success: function (response) {
+                console.log("Enviado" + formData)
+                $('div.inst-content form').hide();
+                $('body #institucionais .inst-content').append("<p>Agradecemos a sua mensagem, entraremos em contato em breve!</p>");
+            },
+            error: function (error) {
+                console.log("Erro:", error)
+            },
+        });
+    })
+
 }
 
 $(document).ready(function () {
