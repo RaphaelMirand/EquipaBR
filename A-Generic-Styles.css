@@ -5401,6 +5401,19 @@ div#frete {
     margin-bottom: 10px;
 }
 
+#frete .freight-values tbody>tr.frete-gratis td:nth-of-type(2) {
+    font-size: 0;
+}
+
+#frete .freight-values tbody>tr.frete-gratis td:nth-of-type(2)::before {
+    content: "Frete retirada na loja, disponível em 1 dia útil";
+    font-size: 16px;
+}
+
+.freight-values table {
+    display: none;
+}
+
 .box-pagamento {
     margin-top: 10px;
 }
@@ -5631,6 +5644,14 @@ body #institucionais .inst-content p {
     font-size: 14px;
     color: #000;
     line-height: normal;
+}
+
+body #institucionais .inst-content p.sucess {
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #21354F;
 }
 
 body #institucionais .inst-content p span {
