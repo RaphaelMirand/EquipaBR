@@ -1233,6 +1233,10 @@ div#barra-principal-wrapper {
         border-bottom: 1px solid rgb(172 172 172 / 0.5);
     }
 
+    .container-menus-mobile>div:not(.topo-menu-mobile, .menu-departamento, .titulo) {
+        display: none;
+    }
+
     .topo-menu-mobile .fale-conosco a {
         display: flex;
         align-items: center;

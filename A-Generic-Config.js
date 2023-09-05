@@ -653,7 +653,7 @@ function institucional() {
             })
     }),
 
-        $("input#telefone").mask("(99) 9999-9999?9").focusout(function (a) {
+        $("input#telefone").mask("(99) 99999-9999").focusout(function (a) {
             var b, c, d;
             b = a.currentTarget ? a.currentTarget : a.srcElement,
                 c = b.value.replace(/\D/g, ""),
