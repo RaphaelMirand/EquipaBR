@@ -5416,6 +5416,7 @@ div#frete {
 
 .freight-values table {
     display: none;
+    width: 100%;
 }
 
 .box-pagamento {

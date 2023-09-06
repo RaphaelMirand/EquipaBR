@@ -210,9 +210,12 @@ function product() {
         })
     }, 1000);
 
+    /* verifica se a table existe e dispara as functions */
+
     function verificarTable() {
         if ($(".freight-values>table").length > 0) {
             verificarFreteGratis();
+            retirarDiasuteis();
         } else {
             setTimeout(function () {
                 verificarTable()
@@ -227,6 +230,22 @@ function product() {
             }
         });
         $(".freight-values>table").css("display", "table")
+    }
+
+    /* retira todo o texto que vem após "úteis" */
+
+    function retirarDiasuteis() {
+        $("#frete .freight-values tbody>tr>td").each(function () {
+            var descricao_frete = $(this).text()
+            var uteis = "úteis"
+            var palavras = descricao_frete.split(' ')
+            var indice = palavras.indexOf(uteis)
+            if (indice !== -1) {
+                var descricao_frete = palavras.slice(0, indice + 1).join(' ')
+                console.log(descricao_frete)
+                $(this).text(descricao_frete)
+            }
+        });
     }
 
 }
