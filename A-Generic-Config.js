@@ -292,37 +292,62 @@ function home() {
 
     /* prateleira marcas */
 
-    $(".home .carrossel-marcas").slick({
-        slidesToShow: 9,
-        slidesToScroll: 1,
-        infinite: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 3,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
+    // $(".home .carrossel-marcas").slick({
+    //     slidesToShow: 9,
+    //     slidesToScroll: 1,
+    //     infinite: true,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 5,
+    //                 slidesToScroll: 3,
+    //                 infinite: true,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //             }
+    //         }
+    //     ]
+    // });
+
+    $(".home .carrossel-marcas").addClass("owl-carousel"),
+        $(".owl-carousel").owlCarousel({
+            margin: 10,
+            navigation: false,
+            dots: false,
+            loop: true,
+            center: false,
+            items: 3,
+            responsiveClass: !0,
+            responsive: {
+                0: {
+                    items: 3,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: true
+                },
+                1e3: {
+                    items: 9,
+                    nav: true
                 }
             }
-        ]
-    });
+        })
 
     /* carrossel de categorias no mobile */
 
